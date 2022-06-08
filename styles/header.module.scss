@@ -1,0 +1,34 @@
+.header {
+  height: 5rem;
+  width: calc(100% - 2rem);
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1rem 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  z-index: 950809;
+}
+
+.header__navigation {
+  width: 25em;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
