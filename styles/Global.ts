@@ -54,6 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     figure {
         width: 100%;
         height:100%;
+        position: relative;
     }
 
     * {

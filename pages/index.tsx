@@ -1,4 +1,4 @@
-import { AboutMe, Header } from 'container'
+import { AboutMe, Header, Skills } from 'container'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
@@ -6,6 +6,7 @@ const Home: NextPage = () => {
     <>
       <Header />
       <AboutMe />
+      <Skills />
     </>
   )
 }

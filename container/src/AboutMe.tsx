@@ -1,6 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import aboutMe from 'styles/about.module.scss'
+import Image from 'next/image'
 
 const AboutMe: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const AboutMe: React.FC = () => {
         <div className={aboutMe.about__content}>
           <div className={aboutMe['about__content-title']}>
             <h1>Title</h1>
-            <h2>Sub Title</h2>
+            <h2>Sub TitleSub TitleSub Title</h2>
             <span>
               DescriptionDescriptionDescriptionDescriptionDescriptionDescription
               Description Description Description Description Description
@@ -17,7 +18,18 @@ const AboutMe: React.FC = () => {
               Description
             </span>
           </div>
-          <div>Profile</div>
+          <div className={aboutMe['about__content-profile']}>
+            <picture>
+              <figure>
+                <Image
+                  src="/profile.webp"
+                  alt="프로필 이미지"
+                  priority
+                  layout="fill"
+                />
+              </figure>
+            </picture>
+          </div>
         </div>
       </div>
     </>

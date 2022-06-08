@@ -12,7 +12,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  background-color: antiquewhite;
+  background-color: rgba(80, 90, 241, 0.3);
   align-self: flex-end;
   padding: 3rem;
 }
@@ -32,5 +32,16 @@
 
   span {
     font-size: 1rem;
+  }
+}
+
+.about__content-profile {
+  width: 20rem;
+  height: 20rem;
+
+  picture {
+    figure {
+      position: relative;
+    }
   }
 }
