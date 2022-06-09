@@ -14,37 +14,37 @@ const Skills: React.FC = () => {
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={1} />
+              <Progress capacity={23} grade={1} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={3} />
+              <Progress capacity={99} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={3} />
+              <Progress capacity={89} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={3} />
+              <Progress capacity={80} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={2} />
+              <Progress capacity={76} grade={2} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={1} />
+              <Progress capacity={45} grade={1} />
             </li>
           </ul>
         </div>
@@ -61,31 +61,31 @@ const Skills: React.FC = () => {
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={3} />
+              <Progress capacity={81} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={3} />
+              <Progress capacity={80} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={3} />
+              <Progress capacity={100} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={2} />
+              <Progress capacity={69} grade={2} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
                 <SIcon />
               </div>
-              <Progress capacity={50} grade={1} />
+              <Progress capacity={25} grade={1} />
             </li>
           </ul>
         </div>

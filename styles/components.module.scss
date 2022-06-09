@@ -1,0 +1,12 @@
+.progress__percentage-text {
+  font-size: 1rem;
+  font-weight: 300;
+  position: relative;
+
+  &::after {
+    content: '%';
+    position: absolute;
+    right: -1rem;
+    font-size: 1rem;
+  }
+}
