@@ -1,30 +1,3 @@
-@keyframes bbaggom {
-  0% {
-    transform: rotate(0);
-  }
-  60% {
-    transform: rotate(0);
-  }
-  70% {
-    transform: rotate(-40deg);
-  }
-  92% {
-    transform: translateY(0) rotate(-40deg);
-  }
-  93% {
-    transform: translateY(-0.3rem) rotate(-40deg);
-  }
-  94% {
-    transform: translateY(0) rotate(-40deg);
-  }
-  98% {
-    transform: rotate(-40deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
 .header {
   height: 5rem;
   width: calc(100% - 2rem);
@@ -117,11 +90,7 @@
           transition: transform 0.2s ease;
           transform-origin: bottom;
 
-          &.header__logo--git-motion {
-            animation: bbaggom 4s linear both running infinite;
-          }
-
-          &:hover:not(.header__logo--git-motion) {
+          &:hover {
             transform: rotate(-45deg);
           }
         }

@@ -2,6 +2,7 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import header from 'styles/header.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Header: React.FC = () => {
   return (
@@ -24,28 +25,50 @@ const Header: React.FC = () => {
         <div className={header.header__logo}>
           <ul className={header['header__logo-list']}>
             <li>
-              <picture>
-                <figure className={header['header__logo--git-motion']}>
-                  <Image
-                    src="/github.svg"
-                    alt="github"
-                    layout="fill"
-                    priority
-                  />
-                </figure>
-              </picture>
+              <Link href="https://github.com/jsg3121">
+                <a target="_blank">
+                  <picture>
+                    <figure className={header['header__logo--git-motion']}>
+                      <Image
+                        src="/github.svg"
+                        alt="github"
+                        layout="fill"
+                        priority
+                      />
+                    </figure>
+                  </picture>
+                </a>
+              </Link>
             </li>
             <li>
-              <picture>
-                <figure>
-                  <Image src="/velog.svg" alt="velog" layout="fill" priority />
-                </figure>
-              </picture>
+              <Link href="https://velog.io/@jsg3121">
+                <a target="_blank">
+                  <picture>
+                    <figure>
+                      <Image
+                        src="/velog.svg"
+                        alt="velog"
+                        layout="fill"
+                        priority
+                      />
+                    </figure>
+                  </picture>
+                </a>
+              </Link>
             </li>
             <li>
-              <picture>
-                <figure></figure>
-              </picture>
+              <Link href="mailto://xodm95@gmail.com">
+                <picture>
+                  <figure>
+                    <Image
+                      src="/gmail.svg"
+                      alt="gmail"
+                      layout="fill"
+                      priority
+                    />
+                  </figure>
+                </picture>
+              </Link>
             </li>
             <li>
               <picture>
