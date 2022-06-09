@@ -1,21 +1,16 @@
-import { AboutMe, Header, Skills } from 'container'
+import { AboutMe, Header, Introduce, Skills } from 'container'
 import type { NextPage } from 'next'
 import React from 'react'
-import { useScroll } from 'hook/scroll'
+import { gsap } from 'gsap'
+import TextPlugin from 'gsap/dist/TextPlugin'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const Home: NextPage = () => {
-  const { scrollY } = useScroll()
-
-  React.useEffect(() => {
-    console.log(scrollY)
-    if (scrollY > window.innerHeight - 200) {
-    }
-  }, [scrollY])
-
-  React.useEffect(() => {}, [])
-
   return (
     <div>
+      <Introduce />
       <Header />
       <AboutMe />
       <Skills />
