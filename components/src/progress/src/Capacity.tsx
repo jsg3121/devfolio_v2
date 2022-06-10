@@ -24,11 +24,14 @@ const CapacityContainer = styled.i<CapacityProps>`
     }
   }};
 `
-const timeline = (ref?: HTMLElement, capacity?: number) => {
+const percentCount = (ref?: HTMLElement, capacity?: number) => {
   if (ref) {
     gsap.to(ref, {
       width: `${capacity}%`,
       duration: 1,
+      scrollTrigger: {
+        trigger: ref,
+      },
     })
   }
 }
@@ -40,9 +43,9 @@ const Capacity: React.FC<CapacityProps> = (props) => {
 
   React.useEffect(() => {
     if (progressRef.current) {
-      timeline(progressRef.current, capacity)
+      percentCount(progressRef.current, capacity)
     }
-    return () => timeline()
+    return () => percentCount()
   }, [capacity])
 
   return (

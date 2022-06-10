@@ -19,6 +19,9 @@ const Percentage: React.FC<PercentageProps> = (props) => {
         duration: 1,
         snap: { textContent: 1 },
         stagger: 1,
+        scrollTrigger: {
+          trigger: percentRef.current,
+        },
       })
     }
 

@@ -13,6 +13,18 @@ const Introduce: React.FC = () => {
       delay: 0.5,
       ease: 'none',
     })
+
+    gsap
+      .timeline({ repeat: -1 })
+      .to(typingRef.current, {
+        borderRight: '2px solid rgba(51, 51, 51, 0)',
+        ease: 'steps(1)',
+      })
+      .to(typingRef.current, {
+        borderRight: '2px solid rgba(51, 51, 51, 1)',
+        ease: 'steps(1)',
+      })
+      .delay(2.5)
   }, [])
 
   return (
