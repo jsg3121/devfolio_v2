@@ -2,6 +2,7 @@ import isEqual from 'fast-deep-equal'
 import { gsap } from 'gsap'
 import React from 'react'
 import components from 'styles/components.module.scss'
+import skills from 'styles/skills.module.scss'
 
 interface PercentageProps {
   capacity: number
@@ -20,7 +21,8 @@ const Percentage: React.FC<PercentageProps> = (props) => {
         snap: { textContent: 1 },
         stagger: 1,
         scrollTrigger: {
-          trigger: percentRef.current,
+          trigger: `${skills.skills__content}`,
+          start: () => window.innerWidth * 2,
         },
       })
     }

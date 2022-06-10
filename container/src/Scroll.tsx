@@ -33,7 +33,6 @@ const Scroll: React.FC = () => {
         pin: true,
         invalidateOnRefresh: true,
         anticipatePin: 1,
-        markers: true,
       },
     })
   }, [])
