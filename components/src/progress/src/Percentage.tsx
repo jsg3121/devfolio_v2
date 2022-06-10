@@ -22,7 +22,7 @@ const Percentage: React.FC<PercentageProps> = (props) => {
         stagger: 1,
         scrollTrigger: {
           trigger: `${skills.skills__content}`,
-          start: () => window.innerWidth * 2,
+          start: () => window.innerHeight * 2,
         },
       })
     }

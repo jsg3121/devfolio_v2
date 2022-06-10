@@ -31,9 +31,6 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         background-color: #ffffff;
     }
-    html{
-       scroll-snap-type: y mandatory;
-    }
     body {
         position: relative;
     }

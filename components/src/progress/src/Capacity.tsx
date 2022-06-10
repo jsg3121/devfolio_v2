@@ -14,6 +14,7 @@ const CapacityContainer = styled.i<CapacityProps>`
   height: 100%;
   display: block;
   border-radius: 0.2rem;
+  will-change: width;
   background-color: ${(props) => {
     switch (props.grade) {
       case 1:
@@ -31,8 +32,8 @@ const percentCount = (ref?: HTMLElement, capacity?: number) => {
       width: `${capacity}%`,
       duration: 1,
       scrollTrigger: {
-        trigger: `${skills.skills}`,
-        start: () => window.innerWidth * 2,
+        trigger: `${skills.skills__content}`,
+        start: () => window.innerHeight * 2,
       },
     })
   }
