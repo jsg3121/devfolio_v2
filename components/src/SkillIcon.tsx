@@ -2,16 +2,23 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import Image from 'next/image'
 
-interface SkillIconProps {}
+interface SkillIconProps {
+  skillPath: string
+}
 
 const SkillIcon: React.FC<SkillIconProps> = (props) => {
-  const {} = props
+  const { skillPath } = props
 
   return (
     <>
       <picture>
         <figure>
-          <Image src="/html.svg" alt="skill_icon" priority layout="fill" />
+          <Image
+            src={`/${skillPath}.svg`}
+            alt="skill_icon"
+            priority
+            layout="fill"
+          />
         </figure>
       </picture>
     </>

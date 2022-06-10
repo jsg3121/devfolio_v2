@@ -8,84 +8,93 @@ const Skills: React.FC = () => {
     <>
       <div className={skills.skills}>
         <div className={skills.skills__content}>
-          <h1>Front End</h1>
+          <h1>Skills</h1>
           <ul>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="html" />
               </div>
-              <Progress capacity={23} grade={1} />
+              <Progress capacity={90} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="css" />
               </div>
-              <Progress capacity={99} grade={3} />
+              <Progress capacity={90} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
-              </div>
-              <Progress capacity={89} grade={3} />
-            </li>
-            <li>
-              <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="javascript" />
               </div>
               <Progress capacity={80} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="typescript" />
               </div>
-              <Progress capacity={76} grade={2} />
+              <Progress capacity={80} grade={3} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="node" />
               </div>
-              <Progress capacity={45} grade={1} />
+              <Progress capacity={80} grade={3} />
             </li>
-          </ul>
-        </div>
-        <div className={skills.skills__content}>
-          <h1>Back End</h1>
-          <ul>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="react" />
+              </div>
+              <Progress capacity={80} grade={3} />
+            </li>
+            <li>
+              <div className={skills['skills__content-icon']}>
+                <SIcon skillPath="vue" />
+              </div>
+              <Progress capacity={70} grade={2} />
+            </li>
+            <li>
+              <div className={skills['skills__content-icon']}>
+                <SIcon skillPath="redux" />
+              </div>
+              <Progress capacity={70} grade={2} />
+            </li>
+            <li>
+              <div className={skills['skills__content-icon']}>
+                <SIcon skillPath="prisma" />
+              </div>
+              <Progress capacity={60} grade={2} />
+            </li>
+            <li>
+              <div className={skills['skills__content-icon']}>
+                <SIcon skillPath="mysql" />
+              </div>
+              <Progress capacity={60} grade={2} />
+            </li>
+            <li>
+              <div className={skills['skills__content-icon']}>
+                <SIcon skillPath="mobx" />
               </div>
               <Progress capacity={50} grade={1} />
             </li>
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="graphql" />
               </div>
-              <Progress capacity={81} grade={3} />
+              <Progress capacity={50} grade={1} />
             </li>
+
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="storybook" />
               </div>
-              <Progress capacity={80} grade={3} />
+              <Progress capacity={50} grade={1} />
             </li>
+
             <li>
               <div className={skills['skills__content-icon']}>
-                <SIcon />
+                <SIcon skillPath="docker" />
               </div>
-              <Progress capacity={100} grade={3} />
-            </li>
-            <li>
-              <div className={skills['skills__content-icon']}>
-                <SIcon />
-              </div>
-              <Progress capacity={69} grade={2} />
-            </li>
-            <li>
-              <div className={skills['skills__content-icon']}>
-                <SIcon />
-              </div>
-              <Progress capacity={25} grade={1} />
+              <Progress capacity={50} grade={1} />
             </li>
           </ul>
         </div>
