@@ -29,6 +29,7 @@ const Progress = styled.div<ProgressProps>`
   }};
   display: flex;
   align-items: center;
+  box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.3);
 `
 
 const ProgressBar: React.FC<ProgressBarProps> = (props) => {

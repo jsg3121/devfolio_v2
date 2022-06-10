@@ -1,9 +1,10 @@
-import { AboutMe, Header, Introduce, Skills } from 'container'
+import { Introduce, Scroll } from 'container'
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import TextPlugin from 'gsap/dist/TextPlugin'
 import type { NextPage } from 'next'
 import React from 'react'
-import { gsap } from 'gsap'
-import TextPlugin from 'gsap/dist/TextPlugin'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import styled from 'styled-components'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
@@ -11,9 +12,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Introduce />
-      <Header />
-      <AboutMe />
-      <Skills />
+      <Scroll />
     </div>
   )
 }

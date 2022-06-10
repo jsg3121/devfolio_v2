@@ -29,6 +29,7 @@
       transition: clip-path 0.2s ease-in-out;
       position: relative;
       cursor: pointer;
+      text-shadow: 0.8px 0.8px 3px rgba(0, 0, 0, 0.3);
 
       &::before {
         background: #333333;
@@ -48,6 +49,7 @@
         transition: clip-path 0.2s ease-in-out;
         position: absolute;
         left: 0;
+        text-shadow: 0.8px 0.8px 3px rgba(255, 255, 255, 0.3);
       }
 
       &:hover {

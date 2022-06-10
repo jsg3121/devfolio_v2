@@ -28,13 +28,13 @@ const Introduce: React.FC = () => {
   }, [])
 
   return (
-    <div className={introduce.introduce}>
+    <section className={introduce.introduce}>
       <div className={introduce.introduce__content}>
         <h2>TitleTitleTitleTitle</h2>
         <h1 ref={typingRef}></h1>
         <h3>내용내용내용내용내용내용내용내용</h3>
       </div>
-    </div>
+    </section>
   )
 }
 
