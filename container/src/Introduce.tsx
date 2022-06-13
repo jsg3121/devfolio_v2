@@ -30,9 +30,10 @@ const Introduce: React.FC = () => {
   return (
     <section className={introduce.introduce}>
       <div className={introduce.introduce__content}>
-        <h2>TitleTitleTitleTitle</h2>
+        <h2>안녕하세요.</h2>
         <h1 ref={typingRef}></h1>
-        <h3>내용내용내용내용내용내용내용내용</h3>
+        <h3>장선규 입니다.</h3>
+        <h3>방문해주셔서 감사합니다.</h3>
       </div>
     </section>
   )

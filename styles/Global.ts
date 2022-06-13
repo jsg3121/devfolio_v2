@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         background-color: #ffffff;
     }
+    
     body {
         position: relative;
     }
