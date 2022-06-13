@@ -6,8 +6,8 @@ import { Progress, SIcon } from 'components'
 const Skills: React.FC = () => {
   return (
     <section className={skills.skills}>
+      <h1>Skills</h1>
       <div className={`${skills.skills__content} skill__content`}>
-        <h1>Skills</h1>
         <ul>
           <li>
             <div className={skills['skills__content-icon']}>

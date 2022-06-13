@@ -2,6 +2,7 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import aboutMe from 'styles/about.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutMe: React.FC = () => {
   return (
@@ -9,7 +10,6 @@ const AboutMe: React.FC = () => {
       <h1>About Me</h1>
       <div className={aboutMe.about__content}>
         <div className={aboutMe['about__content-title']}>
-          <h1>프론트엔드 개발자</h1>
           <span>
             주로 즐겨하던 게임들은 대부분 진행 난이도가 높아 입문하기 어려운
             게임 종류였습니다.
@@ -39,6 +39,36 @@ const AboutMe: React.FC = () => {
           </picture>
         </div>
       </div>
+      {/* <div className={aboutMe['about__content-history']}>
+        <h2>Who Am I?</h2>
+        <ul>
+          <li>
+            <h3>이름</h3>
+            <p>장선규</p>
+          </li>
+          <li>
+            <h3>생년월일</h3>
+            <p>1995. 08. 09</p>
+          </li>
+          <li>
+            <h3>VELOG</h3>
+            <Link href="https://velog.io/@jsg3121">
+              <a target="_blank">https://velog.io/@jsg3121</a>
+            </Link>
+          </li>
+          <li>
+            <h3>GIT</h3>
+            <Link href="https://github.com/jsg3121">
+              <a target="_blank">https://github.com/jsg3121</a>
+            </Link>
+          </li>
+          <li>
+            <h3>CAREER</h3>
+            <p>Quber ( 2019. 11 ~ )</p>
+            <p>Cresector ( 2018. 06 ~ 2019. 07 )</p>
+          </li>
+        </ul>
+      </div> */}
     </section>
   )
 }

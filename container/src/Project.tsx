@@ -1,15 +1,45 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
-import styled from 'styled-components'
-
-const ProjectContainer = styled.section`
-  width: 100%;
-  height: 100vh;
-  background-color: antiquewhite;
-`
+import project from 'styles/project.module.scss'
 
 const Project: React.FC = () => {
-  return <ProjectContainer>asdf</ProjectContainer>
+  return (
+    <section className={project.project}>
+      <h1>Project</h1>
+      <div className={project.project__list}>
+        <div className={project['project__list-item']}>
+          <div className={project['project__list-item--text']}>
+            <h2>Title</h2>
+            <p>
+              DescriptionDescriptionDescrip
+              tionDescriptionDescriptionDescription
+            </p>
+          </div>
+          <div className={project['project__list-item--image']}>image</div>
+        </div>
+        <div className={project['project__list-item']}>
+          <div className={project['project__list-item--text']}>
+            <h2>Title</h2>
+            <p>
+              DescriptionDescriptionDescriptio
+              nDescriptionDescriptionDescription
+            </p>
+          </div>
+          <div className={project['project__list-item--image']}>image</div>
+        </div>
+        <div className={project['project__list-item']}>
+          <div className={project['project__list-item--text']}>
+            <h2>Title</h2>
+            <p>
+              DescriptionDescriptionDescriptio
+              nDescriptionDescriptionDescription
+            </p>
+          </div>
+          <div className={project['project__list-item--image']}>image</div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default React.memo(Project, isEqual)

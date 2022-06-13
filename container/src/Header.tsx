@@ -25,7 +25,7 @@ const Header: React.FC = () => {
         <div className={header.header__logo}>
           <ul className={header['header__logo-list']}>
             <li>
-              <Link href="https://github.com/jsg3121">
+              <Link href="hhttps://github.com/jsg3121/devfolio_v2">
                 <a target="_blank">
                   <picture>
                     <figure className={header['header__logo--git-motion']}>

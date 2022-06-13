@@ -1,0 +1,25 @@
+.contact {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  padding: 8rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  & > h1 {
+    width: 100%;
+    font-size: 3.5rem;
+    height: 3.5rem;
+    font-weight: 900;
+    left: 5rem;
+    top: 8rem;
+    position: sticky;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+.contact__content {
+  width: calc(100% - 18rem);
+  height: 100vh;
+  background-color: cadetblue;
+}
