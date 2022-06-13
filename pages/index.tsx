@@ -1,12 +1,10 @@
 import { AboutMe, Introduce, Skills } from 'container'
 import { gsap } from 'gsap'
+import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import TextPlugin from 'gsap/dist/TextPlugin'
-import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 import type { NextPage } from 'next'
 import React from 'react'
-import styled from 'styled-components'
-import { useScroll } from 'hook'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin)
 
@@ -21,35 +19,29 @@ const goSection = (idx: number) => {
 }
 
 const Home: NextPage = () => {
-  const [isScroll, setIsScroll] = React.useState<boolean>(true)
-  const scrollRef = React.useRef<HTMLDivElement>(null)
-  const { scrollY } = useScroll()
-
   React.useEffect(() => {
     const sections = gsap.utils.toArray(
       `.scoll_snap section`
     ) as Array<gsap.DOMTarget>
 
-    const scrolling = () => {
-      sections.forEach((section, idx: number) => {
-        ScrollTrigger.create({
-          trigger: section,
-          onEnter: () => goSection(idx),
-        })
-
-        ScrollTrigger.create({
-          trigger: section,
-          start: 'bottom bottom',
-          onEnterBack: () => goSection(idx),
-        })
+    sections.forEach((section, idx: number) => {
+      ScrollTrigger.create({
+        trigger: section,
+        onEnter: () => goSection(idx),
       })
-    }
 
-    return () => scrolling()
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'bottom bottom',
+        onEnterBack: () => goSection(idx),
+      })
+    })
+
+    return
   }, [])
 
   return (
-    <div className="scoll_snap" ref={scrollRef}>
+    <div className="scoll_snap">
       <Introduce />
       <AboutMe />
       <Skills />

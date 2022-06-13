@@ -3,11 +3,9 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import styled from 'styled-components'
 import { GlobalStyle } from '../styles/Global'
-
 const Root = styled.main`
   width: 100%;
 `
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>

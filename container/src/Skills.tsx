@@ -6,7 +6,7 @@ import { Progress, SIcon } from 'components'
 const Skills: React.FC = () => {
   return (
     <section className={skills.skills}>
-      <div className={skills.skills__content}>
+      <div className={`${skills.skills__content} skill__content`}>
         <h1>Skills</h1>
         <ul>
           <li>
@@ -88,7 +88,6 @@ const Skills: React.FC = () => {
             </div>
             <Progress capacity={50} grade={1} />
           </li>
-
           <li>
             <div className={skills['skills__content-icon']}>
               <SIcon skillPath="docker" />

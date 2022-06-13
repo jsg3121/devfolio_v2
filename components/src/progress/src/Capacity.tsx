@@ -2,7 +2,6 @@ import isEqual from 'fast-deep-equal'
 import { gsap } from 'gsap'
 import React from 'react'
 import styled from 'styled-components'
-import skills from 'styles/skills.module.scss'
 
 interface CapacityProps {
   capacity: number
@@ -32,8 +31,9 @@ const percentCount = (ref?: HTMLElement, capacity?: number) => {
       width: `${capacity}%`,
       duration: 1,
       scrollTrigger: {
-        trigger: `${skills.skills__content}`,
+        trigger: document.querySelector('.skill__content'),
         start: () => window.innerHeight * 2,
+        end: () => window.innerHeight * 2,
       },
     })
   }
