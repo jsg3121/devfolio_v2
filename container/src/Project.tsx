@@ -1,23 +1,13 @@
 import axios from 'axios'
+import { ProjectList } from 'components'
 import isEqual from 'fast-deep-equal'
-import { NextPage } from 'next'
-import Image from 'next/image'
 import React from 'react'
 import project from 'styles/project.module.scss'
 import useSWR from 'swr'
 
-interface ProjectTypes {
-  index: number
-  name: string
-  date: string
-  skills: Array<string>
-  git: string
-  mainDescription: string
-  detail: Array<string>
-  thumbnail: string
-}
-
 const Project: React.FC = () => {
+  const [isShow, setIsShow] = React.useState<boolean>(false)
+
   const { data } = useSWR<Array<ProjectTypes>>('/api/project', async () => {
     return await axios
       .request({
@@ -29,32 +19,17 @@ const Project: React.FC = () => {
       })
   })
 
+  const handleClick = React.useCallback((index: number) => {
+    console.log(index)
+  }, [])
+
   return (
     <section className={project.project}>
       <h1>Project</h1>
       <div className={project.project__list}>
         {data &&
           data.map((list, index: number) => {
-            return (
-              <div className={project['project__list-item']} key={index}>
-                <div className={project['project__list-item--text']}>
-                  <h2>{list.name}</h2>
-                  <p>{list.mainDescription}</p>
-                </div>
-                <div className={project['project__list-item--image']}>
-                  <picture>
-                    <figure>
-                      <Image
-                        src={list.thumbnail}
-                        layout="fill"
-                        priority
-                        alt="프로젝트썸네일 이미지"
-                      ></Image>
-                    </figure>
-                  </picture>
-                </div>
-              </div>
-            )
+            return <ProjectList data={list} key={index} onClick={handleClick} />
           })}
       </div>
     </section>

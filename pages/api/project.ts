@@ -1,17 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-interface ProjectTypes {
-  index: number
-  name: string
-  date: string
-  skills: Array<string>
-  git: string
-  mainDescription: string
-  detail: Array<string>
-  thumbnail: string
-}
-
 const projectData: Array<ProjectTypes> = [
   {
     index: 1,
