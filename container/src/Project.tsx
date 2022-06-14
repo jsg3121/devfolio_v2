@@ -4,6 +4,7 @@ import isEqual from 'fast-deep-equal'
 import React from 'react'
 import project from 'styles/project.module.scss'
 import useSWR from 'swr'
+import ProjectDetail from './ProjectDetail'
 
 const Project: React.FC = () => {
   const [isShow, setIsShow] = React.useState<boolean>(false)
@@ -32,6 +33,7 @@ const Project: React.FC = () => {
             return <ProjectList data={list} key={index} onClick={handleClick} />
           })}
       </div>
+      <ProjectDetail />
     </section>
   )
 }

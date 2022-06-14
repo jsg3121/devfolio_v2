@@ -1,12 +1,16 @@
 declare global {
+  export interface ProjectDetailTypes {
+    git: string
+    detailDescription: Array<string>
+    date: string
+    skills: Array<string>
+    detailThumbnail: Array<string>
+  }
   export interface ProjectTypes {
     index: number
     name: string
-    date: string
-    skills: Array<string>
-    git: string
     mainDescription: string
-    detail: Array<string>
+    detail: ProjectDetailTypes
     thumbnail: string
   }
 }
