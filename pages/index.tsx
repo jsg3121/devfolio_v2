@@ -1,4 +1,4 @@
-import { AboutMe, Contact, Introduce, Project, Skills } from 'container'
+import { AboutMe, Contact, Footer, Introduce, Project, Skills } from 'container'
 import { gsap } from 'gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
@@ -47,6 +47,7 @@ const Home: NextPage = () => {
       <Skills />
       <Project />
       <Contact />
+      <Footer />
     </div>
   )
 }
