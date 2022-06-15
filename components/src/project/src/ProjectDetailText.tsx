@@ -1,8 +1,8 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import project from 'styles/project.module.scss'
-import Image from 'next/image'
 import Link from 'next/link'
+import { Image } from 'components'
 
 interface ProjectDetailTextProps {
   type: 'info' | 'description'
@@ -29,16 +29,13 @@ const ProjectDetailText: React.FC<ProjectDetailTextProps> = (props) => {
         {skills.map((item, index) => {
           return (
             <div key={index}>
-              <picture key={index}>
-                <figure>
-                  <Image
-                    src={`/${item}.svg`}
-                    alt="skill_icon"
-                    layout="fill"
-                    priority
-                  ></Image>
-                </figure>
-              </picture>
+              <Image
+                src={`/${item}.svg`}
+                alt="skill_icon"
+                layout="fill"
+                priority
+                shadow
+              />
             </div>
           )
         })}

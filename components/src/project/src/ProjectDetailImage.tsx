@@ -1,7 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
-import Image from 'next/image'
 import project from 'styles/project.module.scss'
+import { Image } from 'components'
 
 interface ProjectDetailImageProps {
   image: string
@@ -12,17 +12,13 @@ const ProjectDetailImage: React.FC<ProjectDetailImageProps> = (props) => {
 
   return (
     <div className={project['detail__slide-info--image']}>
-      <picture>
-        <figure>
-          <Image
-            src={image}
-            priority
-            alt="detail_image"
-            layout="fill"
-            objectFit="contain"
-          ></Image>
-        </figure>
-      </picture>
+      <Image
+        src={image}
+        priority
+        alt="detail_image"
+        layout="fill"
+        objectFit="contain"
+      />
     </div>
   )
 }

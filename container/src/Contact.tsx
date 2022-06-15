@@ -1,25 +1,22 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import contact from 'styles/contact.module.scss'
-import Image from 'next/image'
+import { Image } from 'components'
 
 const Contact: React.FC = () => {
   return (
     <section className={contact.contact}>
       <h1>Contact</h1>
-      <div className={contact.contact__content}>
+      <div className={contact['contact__content--interview']}>
+        <h2>Who Am I?</h2>
         <div className={contact.contact__teller}>
           <div className={contact['contact__profile-image']}>
-            <picture>
-              <figure>
-                <Image
-                  src="/about_img_sample.webp"
-                  layout="fill"
-                  alt="imozy"
-                  priority
-                ></Image>
-              </figure>
-            </picture>
+            <Image
+              src="/about_img_sample.webp"
+              layout="fill"
+              alt="imozy"
+              priority
+            />
           </div>
           <div className={contact['contact__teller-description']}>
             <p>
@@ -32,16 +29,12 @@ const Contact: React.FC = () => {
         </div>
         <div className={contact.contact__teller}>
           <div className={contact['contact__profile-image']}>
-            <picture>
-              <figure>
-                <Image
-                  src="/about_img_sample.webp"
-                  layout="fill"
-                  alt="imozy"
-                  priority
-                ></Image>
-              </figure>
-            </picture>
+            <Image
+              src="/about_img_sample.webp"
+              layout="fill"
+              alt="imozy"
+              priority
+            />
           </div>
           <div className={contact['contact__teller-description']}>
             <p>
@@ -55,16 +48,7 @@ const Contact: React.FC = () => {
         </div>
         <div className={contact.contact__teller}>
           <div className={contact['contact__profile-image']}>
-            <picture>
-              <figure>
-                <Image
-                  src="/about_img_1.webp"
-                  layout="fill"
-                  alt="imozy"
-                  priority
-                ></Image>
-              </figure>
-            </picture>
+            <Image src="/about_img_1.webp" layout="fill" alt="imozy" priority />
           </div>
           <div className={contact['contact__teller-description']}>
             <p>

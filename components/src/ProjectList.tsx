@@ -1,7 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import project from 'styles/project.module.scss'
-import Image from 'next/image'
+import Image from './Image'
 
 interface ProjectListProps {
   data: ProjectTypes
@@ -22,16 +22,12 @@ const ProjectList: React.FC<ProjectListProps> = (props) => {
         <p>{data.mainDescription}</p>
       </div>
       <div className={project['project__list-item--image']}>
-        <picture>
-          <figure>
-            <Image
-              src={data.thumbnail}
-              layout="fill"
-              priority
-              alt="프로젝트썸네일 이미지"
-            ></Image>
-          </figure>
-        </picture>
+        <Image
+          src={data.thumbnail}
+          layout="fill"
+          priority
+          alt="프로젝트썸네일 이미지"
+        />
       </div>
     </div>
   )

@@ -6,79 +6,67 @@ import Link from 'next/link'
 
 const Header: React.FC = () => {
   return (
-    <>
-      <div className={header.header}>
-        <ul className={header.header__navigation}>
+    <div className={header.header}>
+      <ul className={header.header__navigation}>
+        <li>
+          <h1 data-content="About Me">About Me</h1>
+        </li>
+        <li>
+          <h1 data-content="Skills">Skills</h1>
+        </li>
+        <li>
+          <h1 data-content="Project">Project</h1>
+        </li>
+        <li>
+          <h1 data-content="Content">Contact</h1>
+        </li>
+      </ul>
+      <div className={header.header__logo}>
+        <ul className={header['header__logo-list']}>
           <li>
-            <h1 data-content="About Me">About Me</h1>
-          </li>
-          <li>
-            <h1 data-content="Skills">Skills</h1>
-          </li>
-          <li>
-            <h1 data-content="Project">Project</h1>
-          </li>
-          <li>
-            <h1 data-content="Content">Contact</h1>
-          </li>
-        </ul>
-        <div className={header.header__logo}>
-          <ul className={header['header__logo-list']}>
-            <li>
-              <Link href="https://github.com/jsg3121/devfolio_v2">
-                <a target="_blank">
-                  <picture>
-                    <figure>
-                      <Image
-                        src="/github.svg"
-                        alt="github"
-                        layout="fill"
-                        priority
-                      />
-                    </figure>
-                  </picture>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://velog.io/@jsg3121">
-                <a target="_blank">
-                  <picture>
-                    <figure>
-                      <Image
-                        src="/velog.svg"
-                        alt="velog"
-                        layout="fill"
-                        priority
-                      />
-                    </figure>
-                  </picture>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="mailto://xodm95@gmail.com">
+            <Link href="https://github.com/jsg3121/devfolio_v2">
+              <a target="_blank">
                 <picture>
                   <figure>
                     <Image
-                      src="/gmail.svg"
-                      alt="gmail"
+                      src="/github.svg"
+                      alt="github"
                       layout="fill"
                       priority
                     />
                   </figure>
                 </picture>
-              </Link>
-            </li>
-            <li>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://velog.io/@jsg3121">
+              <a target="_blank">
+                <picture>
+                  <figure>
+                    <Image
+                      src="/velog.svg"
+                      alt="velog"
+                      layout="fill"
+                      priority
+                    />
+                  </figure>
+                </picture>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="mailto://xodm95@gmail.com">
               <picture>
-                <figure></figure>
+                <figure>
+                  <Image src="/gmail.svg" alt="gmail" layout="fill" priority />
+                </figure>
               </picture>
-            </li>
-          </ul>
-        </div>
+            </Link>
+          </li>
+        </ul>
       </div>
-    </>
+    </div>
   )
 }
 
