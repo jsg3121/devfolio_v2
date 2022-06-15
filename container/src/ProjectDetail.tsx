@@ -36,6 +36,13 @@ const DetailContent = styled((props) => {
     );
     z-index: -1;
   }
+
+  & > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+  }
 `
 
 const settings: Settings = {
@@ -57,9 +64,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = (props) => {
     [onClick]
   )
 
+  const handleClickClose = React.useCallback(() => {
+    onClick()
+  }, [onClick])
+
   return (
     <section className={project.detail} onClick={handleClick}>
       <DetailContent thumbnail={thumbnail}>
+        <h1 onClick={handleClickClose}>닫기</h1>
         <Slider {...settings}>
           <div className={project.detail__slide}>
             <ProjectDetailText
