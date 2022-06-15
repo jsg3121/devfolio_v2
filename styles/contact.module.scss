@@ -106,11 +106,32 @@
     ul {
       li {
         height: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
 
-        p {
+        h1 {
+          width: 8rem;
+          position: relative;
+          font-size: 1.5rem;
+          margin-right: 0.5rem;
+
+          &::after {
+            content: '\003A';
+            position: absolute;
+            height: 100%;
+            right: 0;
+            margin-right: 0.5rem;
+          }
+        }
+
+        p,
+        a,
+        h2 {
           height: 100%;
           font-size: 1.5rem;
           line-height: 2rem;
+          font-weight: normal;
         }
       }
     }

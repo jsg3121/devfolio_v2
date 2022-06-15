@@ -64,6 +64,27 @@ const Header: React.FC = () => {
               </picture>
             </Link>
           </li>
+          <li>
+            <picture>
+              <figure>
+                <Image src="/pdf.svg" alt="doc_icon" layout="fill" priority />
+              </figure>
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <figure>
+                <Image src="/ppt.svg" alt="doc_icon" layout="fill" priority />
+              </figure>
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <figure>
+                <Image src="/word.svg" alt="doc_icon" layout="fill" priority />
+              </figure>
+            </picture>
+          </li>
         </ul>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import contact from 'styles/contact.module.scss'
 import { Image } from 'components'
+import Link from 'next/link'
 
 const Contact: React.FC = () => {
   return (
@@ -74,19 +75,33 @@ const Contact: React.FC = () => {
         <div className={contact['contact__more-info']}>
           <ul>
             <li>
-              <p>mail</p>
+              <h1>Mail</h1>
+              <Link href="mailto:xodm95@gmail.com">
+                <a target="_blank">xodm95@gmail.com</a>
+              </Link>
             </li>
             <li>
-              <p>git</p>
+              <h1>git</h1>
+              <Link href="https://github.com/jsg3121">
+                <a target="_blank">https://github.com/jsg3121</a>
+              </Link>
             </li>
             <li>
-              <p>velog</p>
+              <h1>velog</h1>
+              <Link href="https://velog.io/@jsg3121">
+                <a target="_blank">https://velog.io/@jsg3121</a>
+              </Link>
             </li>
             <li>
-              <p>wakatime</p>
+              <h1>wakatime</h1>
+              <Link href="https://wakatime.com/@jsg3121">
+                <a target="_blank">https://wakatime.com/@jsg3121</a>
+              </Link>
             </li>
             <li>
-              <p>File</p>
+              <h2>
+                더 많은 정보는 좌측 아이콘으로 이동하여 확인하실 수 있어요!
+              </h2>
             </li>
           </ul>
         </div>
