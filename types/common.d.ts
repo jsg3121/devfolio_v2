@@ -1,5 +1,6 @@
 declare global {
   export interface ProjectDetailTypes {
+    name: string
     git: string
     detailDescription: Array<string>
     date: string

@@ -8,6 +8,7 @@ import ProjectDetail from './ProjectDetail'
 
 const Project: React.FC = () => {
   const [isShow, setIsShow] = React.useState<boolean>(false)
+  const [detailIndex, setDetailIndex] = React.useState<number>(0)
 
   const { data } = useSWR<Array<ProjectTypes>>('/api/project', async () => {
     return await axios
@@ -21,7 +22,12 @@ const Project: React.FC = () => {
   })
 
   const handleClick = React.useCallback((index: number) => {
-    console.log(index)
+    setDetailIndex(index - 1)
+    setIsShow(true)
+  }, [])
+
+  const handleClickClose = React.useCallback(() => {
+    setIsShow(false)
   }, [])
 
   return (
@@ -33,7 +39,13 @@ const Project: React.FC = () => {
             return <ProjectList data={list} key={index} onClick={handleClick} />
           })}
       </div>
-      <ProjectDetail />
+      {data && isShow && (
+        <ProjectDetail
+          data={data[detailIndex].detail}
+          thumbnail={data[detailIndex].thumbnail}
+          onClick={handleClickClose}
+        />
+      )}
     </section>
   )
 }

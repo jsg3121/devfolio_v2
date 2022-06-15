@@ -1,8 +1,11 @@
 import { Header } from 'container'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
 import styled from 'styled-components'
 import { GlobalStyle } from '../styles/Global'
+
 const Root = styled.main`
   width: 100%;
 `
