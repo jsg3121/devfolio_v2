@@ -42,6 +42,7 @@ const DetailContent = styled((props) => {
     font-weight: bold;
     position: absolute;
     right: 0;
+    z-index: 1000;
   }
 `
 
