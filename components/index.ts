@@ -2,4 +2,8 @@ export { default as SIcon } from './src/SkillIcon'
 export { default as Progress } from './src/ProgressBar'
 export { default as ProjectList } from './src/ProjectList'
 export { default as Image } from './src/Image'
+export { default as HeaderNav } from './src/HeaderNav'
+export { default as HeaderSNB } from './src/HeaderSNB'
+
 export * from './src/project'
+export * from './src/aboutMe'

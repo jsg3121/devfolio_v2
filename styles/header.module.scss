@@ -28,7 +28,6 @@
       will-change: transform;
       transition: clip-path 0.2s ease-in-out;
       position: relative;
-      cursor: pointer;
       text-shadow: 0.8px 0.8px 3px rgba(0, 0, 0, 0.3);
 
       &::before {
@@ -66,7 +65,7 @@
   }
 }
 
-.header__logo {
+.header__icon {
   width: 3rem;
   height: 100vh;
   position: fixed;
@@ -74,7 +73,7 @@
   right: -3rem;
   top: 0;
 
-  .header__logo-list {
+  .header__icon-list {
     width: 3rem;
     height: 40rem;
     overflow: hidden;
@@ -86,6 +85,11 @@
       width: 3rem;
       height: 3rem;
       margin-bottom: 1rem;
+
+      button {
+        width: 3rem;
+        height: 3rem;
+      }
 
       picture {
         cursor: pointer;

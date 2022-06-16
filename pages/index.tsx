@@ -42,12 +42,12 @@ const Home: NextPage = () => {
 
   return (
     <div className="scoll_snap">
-      <Introduce />
+      {/* <Introduce />
       <AboutMe />
       <Skills />
       <Project />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

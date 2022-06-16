@@ -31,7 +31,7 @@ const Project: React.FC = () => {
   }, [])
 
   return (
-    <section className={project.project}>
+    <section className={project.project} id="project">
       <h1>Project</h1>
       <div className={project.project__list}>
         {data &&

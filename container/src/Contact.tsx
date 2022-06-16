@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Contact: React.FC = () => {
   return (
-    <section className={contact.contact}>
+    <section className={contact.contact} id="contact">
       <h1>Contact</h1>
       <div className={contact['contact__content--interview']}>
         <h2>Who Am I?</h2>

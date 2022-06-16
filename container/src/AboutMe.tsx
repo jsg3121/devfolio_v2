@@ -6,7 +6,7 @@ import { Image } from 'components'
 
 const AboutMe: React.FC = () => {
   return (
-    <section className={aboutMe.about}>
+    <section className={aboutMe.about} id="aboutMe">
       <h1>About Me</h1>
       <div className={aboutMe.about__content}>
         <div className={aboutMe['about__content-title']}>
