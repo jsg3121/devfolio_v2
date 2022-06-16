@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <div className={header.header}>
       <button className={header['header__nav-button']}>
-        <Image src="/hamburger.svg" layout="fill" alt="nav_icon" priority />
+        <Image src="/close.svg" layout="fill" alt="nav_icon" priority />
       </button>
       <HeaderNav />
       <HeaderSNB />

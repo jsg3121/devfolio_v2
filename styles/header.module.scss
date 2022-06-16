@@ -128,6 +128,19 @@
     right: 2rem;
     top: 2rem;
     filter: drop-shadow(0.4rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+    will-change: transform;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &::after {
+      content: '';
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      right: -3rem;
+      top: 0;
+      background: url('../public/close.svg') center/contain no-repeat;
+    }
   }
 
   .header__navigation {
@@ -166,7 +179,7 @@
       li {
         width: 2.7rem;
         height: 2.7rem;
-        filter: drop-shadow(0.4rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+        filter: drop-shadow(0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
 
         &:nth-child(n + 4):nth-child(-n + 6) {
           display: none;
