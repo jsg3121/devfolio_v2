@@ -118,7 +118,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
-    right: 0;
+    right: -50%;
   }
 
   .header__nav-button {
@@ -131,15 +131,14 @@
     will-change: transform;
     overflow: hidden;
     transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
 
-    &::after {
-      content: '';
+    picture {
       width: 3rem;
       height: 3rem;
-      position: absolute;
-      right: -3rem;
-      top: 0;
-      background: url('../public/close.svg') center/contain no-repeat;
+      flex-shrink: 0;
     }
   }
 
