@@ -1,104 +1,202 @@
-.header {
-  height: 5rem;
-  width: calc(100% - 2rem);
-  position: fixed;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(3px);
-  padding: 0 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 1rem 1rem 0;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  z-index: 950809;
-}
+@media screen and (min-width: 680px) {
+  .header {
+    height: 5rem;
+    width: calc(100% - 2rem);
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1rem 1rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 950809;
+  }
 
-.header__navigation {
-  width: 25em;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .header__navigation {
+    width: 25em;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  li {
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      will-change: transform;
-      transition: clip-path 0.2s ease-in-out;
-      position: relative;
-      cursor: pointer;
-      text-shadow: 0.8px 0.8px 3px rgba(0, 0, 0, 0.3);
-
-      &::before {
-        background: #333333;
-        content: '';
-        inset: 0;
-        position: absolute;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.2s ease-in-out;
-        z-index: -1;
+    li {
+      input {
+        display: none;
       }
 
-      &::after {
-        content: attr(data-content);
-        color: #ffffff;
-        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-        transition: clip-path 0.2s ease-in-out;
-        position: absolute;
-        left: 0;
-        text-shadow: 0.8px 0.8px 3px rgba(255, 255, 255, 0.3);
+      label {
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 500;
+          will-change: transform;
+          transition: clip-path 0.2s ease-in-out;
+          position: relative;
+          text-shadow: 0.8px 0.8px 3px rgba(0, 0, 0, 0.3);
+
+          &::before {
+            background: #333333;
+            content: '';
+            inset: 0;
+            position: absolute;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease-in-out;
+            z-index: -1;
+          }
+
+          &::after {
+            content: attr(data-content);
+            color: #ffffff;
+            clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+            transition: clip-path 0.2s ease-in-out;
+            position: absolute;
+            left: 0;
+            text-shadow: 0.8px 0.8px 3px rgba(255, 255, 255, 0.3);
+          }
+
+          &:hover {
+            &::before {
+              transform: scaleX(1);
+              content: '';
+            }
+
+            &::after {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+          }
+        }
       }
 
-      &:hover {
-        &::before {
-          transform: scaleX(1);
-          content: '';
+      input:checked + label {
+        h1 {
+          &::before {
+            transform: scaleX(1);
+            content: '';
+          }
+
+          &::after {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+    }
+  }
+
+  .header__icon {
+    width: 3rem;
+    height: 100vh;
+    position: fixed;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    right: -3rem;
+    top: 0;
+
+    .header__icon-list {
+      width: 3rem;
+      height: 40rem;
+      overflow: hidden;
+      position: absolute;
+      right: 3rem;
+      top: 5rem;
+
+      li {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        position: relative;
+        right: -1.7rem;
+        will-change: transform;
+        transition: transform 0.2s ease;
+        transform-origin: bottom;
+
+        &:hover {
+          transform: rotate(-45deg);
         }
 
-        &::after {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        button {
+          width: 3rem;
+          height: 3rem;
         }
       }
     }
   }
 }
 
-.header__logo {
-  width: 3rem;
-  height: 100vh;
-  position: fixed;
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  right: -3rem;
-  top: 0;
+@media screen and (max-width: 679px) {
+  .header {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: -50%;
+    z-index: 950809;
+  }
 
-  .header__logo-list {
+  .header__nav-button {
+    position: fixed;
     width: 3rem;
-    height: 40rem;
+    height: 3rem;
+    right: 2rem;
+    top: 2rem;
+    filter: drop-shadow(0.4rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+    will-change: transform;
     overflow: hidden;
-    position: absolute;
-    right: 3rem;
-    top: 5rem;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    z-index: 19950809;
 
-    li {
+    picture {
       width: 3rem;
       height: 3rem;
+      flex-shrink: 0;
+    }
+  }
+
+  .header__navigation {
+    position: absolute;
+    right: 2rem;
+    top: 8rem;
+
+    li {
+      width: 100%;
       margin-bottom: 1rem;
 
-      picture {
-        cursor: pointer;
+      h1 {
+        width: 100%;
+        font-size: 2.3rem;
+        font-weight: 500;
+        color: #ffffff;
+        text-align: right;
+        text-shadow: 0.4rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
 
-        figure {
-          right: -1.7rem;
-          will-change: transform;
-          transition: transform 0.2s ease;
-          transform-origin: bottom;
+  .header__icon {
+    position: absolute;
+    width: 100%;
+    height: 2.7rem;
+    bottom: 3rem;
 
-          &:hover {
-            transform: rotate(-45deg);
-          }
+    ul {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0 auto;
+
+      li {
+        width: 2.7rem;
+        height: 2.7rem;
+        filter: drop-shadow(0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+
+        &:nth-child(n + 4):nth-child(-n + 6) {
+          display: none;
         }
       }
     }

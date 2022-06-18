@@ -5,7 +5,7 @@ import { Progress, SIcon } from 'components'
 
 const Skills: React.FC = () => {
   return (
-    <section className={skills.skills}>
+    <section className={skills.skills} id="skills">
       <h1>Skills</h1>
       <div className={`${skills.skills__content} skill__content`}>
         <ul>
