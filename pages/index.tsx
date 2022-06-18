@@ -53,10 +53,10 @@ const Home: NextPage = () => {
     <div className="scoll_snap">
       <Introduce />
       <AboutMe />
-      <Skills />
+      {/* <Skills />
       <Project />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }
