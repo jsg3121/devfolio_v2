@@ -40,14 +40,23 @@ const Home: NextPage = () => {
   //   return
   // }, [])
 
+  React.useEffect(() => {
+    const windowWidth = window.innerWidth
+    if (windowWidth >= 680) {
+      document.querySelector('html')?.setAttribute('aria-mode', 'desktop')
+    } else {
+      document.querySelector('html')?.setAttribute('aria-mode', 'mobile')
+    }
+  }, [])
+
   return (
     <div className="scoll_snap">
-      {/* <Introduce />
+      <Introduce />
       <AboutMe />
       <Skills />
       <Project />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </div>
   )
 }
