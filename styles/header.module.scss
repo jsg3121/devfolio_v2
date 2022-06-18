@@ -105,25 +105,20 @@
         width: 3rem;
         height: 3rem;
         margin-bottom: 1rem;
+        cursor: pointer;
+        position: relative;
+        right: -1.7rem;
+        will-change: transform;
+        transition: transform 0.2s ease;
+        transform-origin: bottom;
+
+        &:hover {
+          transform: rotate(-45deg);
+        }
 
         button {
           width: 3rem;
           height: 3rem;
-        }
-
-        picture {
-          cursor: pointer;
-
-          figure {
-            right: -1.7rem;
-            will-change: transform;
-            transition: transform 0.2s ease;
-            transform-origin: bottom;
-
-            &:hover {
-              transform: rotate(-45deg);
-            }
-          }
         }
       }
     }

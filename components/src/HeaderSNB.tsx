@@ -20,13 +20,13 @@ const HeaderSNB: React.FC = () => {
           <HeaderIcon image="/gmail.svg" link="mailto://xodm95@gmail.com" />
         </li>
         <li>
-          <HeaderFile image="/pdf.svg" />
+          <HeaderFile image="/pdf.svg" path="test.pdf" />
         </li>
         <li>
-          <HeaderFile image="/ppt.svg" />
+          <HeaderFile image="/ppt.svg" path="test.pdf" />
         </li>
         <li>
-          <HeaderFile image="/word.svg" />
+          <HeaderFile image="/word.svg" path="test.pdf" />
         </li>
       </ul>
     </div>
