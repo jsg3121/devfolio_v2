@@ -43,9 +43,9 @@ const Home: NextPage = () => {
   React.useEffect(() => {
     const windowWidth = window.innerWidth
     if (windowWidth >= 680) {
-      document.querySelector('html')?.setAttribute('aria-mode', 'desktop')
+      document.querySelector('html')?.setAttribute('data-mode', 'desktop')
     } else {
-      document.querySelector('html')?.setAttribute('aria-mode', 'mobile')
+      document.querySelector('html')?.setAttribute('data-mode', 'mobile')
     }
   }, [])
 

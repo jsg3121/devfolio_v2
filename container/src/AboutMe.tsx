@@ -30,12 +30,7 @@ const AboutMe: React.FC = () => {
           </span>
         </div>
         <div className={aboutMe['about__content-profile']}>
-          <Image
-            src="/profile.webp"
-            alt="프로필 이미지"
-            priority
-            layout="fill"
-          />
+          <Image src="/profile.webp" alt="프로필 이미지" layout="fill" />
         </div>
       </div>
     </section>
