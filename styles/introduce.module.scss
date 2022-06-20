@@ -12,6 +12,10 @@
 }
 
 .introduce__content {
+  @media screen and (max-width: 419px) {
+    width: 100%;
+  }
+
   h1 {
     height: 5.5rem;
     font-size: 5.5rem;
@@ -27,14 +31,9 @@
       height: 4rem;
     }
 
-    @media screen and (min-width: 420px) and (max-width: 679px) {
-      font-size: 3rem;
-      height: 3rem;
-    }
-
-    @media screen and (max-width: 419px) {
-      font-size: 2.3rem;
-      height: 2.3rem;
+    @media screen and (max-width: 679px) {
+      font-size: 8.7vw;
+      height: 8.7vw;
     }
   }
 
@@ -50,14 +49,9 @@
       height: 3rem;
     }
 
-    @media screen and (min-width: 420px) and (max-width: 679px) {
-      font-size: 2.3rem;
-      height: 2.3rem;
-    }
-
-    @media screen and (max-width: 419px) {
-      font-size: 1.8rem;
-      height: 1.8rem;
+    @media screen and (max-width: 679px) {
+      font-size: 6.7vw;
+      height: 6.7vw;
     }
   }
 
@@ -73,14 +67,9 @@
       height: 2.6rem;
     }
 
-    @media screen and (min-width: 420px) and (max-width: 679px) {
-      font-size: 2rem;
-      height: 2rem;
-    }
-
-    @media screen and (max-width: 419px) {
-      font-size: 1.5rem;
-      height: 1.5rem;
+    @media screen and (max-width: 679px) {
+      font-size: 5.6vw;
+      height: 5.6vw;
     }
   }
 }
