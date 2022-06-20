@@ -4,27 +4,55 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 8rem 5rem;
+  padding: 8rem 3rem;
+
+  @media screen and (max-width: 679px) {
+    padding: 2rem 1.6rem;
+  }
 }
 
 .introduce__content {
+  @media screen and (max-width: 419px) {
+    width: 100%;
+  }
+
   h1 {
-    height: 6rem;
-    font-size: 6rem;
+    height: 4rem;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width: 680px) and (max-width: 859px) {
+      font-size: 3rem;
+      height: 3rem;
+    }
+
+    @media screen and (max-width: 679px) {
+      font-size: 6.7vw;
+      height: 6.7vw;
+    }
+  }
+
+  h2 {
+    height: 5.5rem;
+    font-size: 5.5rem;
     font-weight: 900;
     margin-bottom: 1.3rem;
     padding-right: 0.5rem;
     width: max-content;
     border-right: 2px solid rgba(51, 51, 51, 1);
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
-  }
 
-  h2 {
-    height: 4.5rem;
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin-bottom: 1.3rem;
-    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+    @media screen and (min-width: 680px) and (max-width: 859px) {
+      font-size: 4rem;
+      height: 4rem;
+    }
+
+    @media screen and (max-width: 679px) {
+      font-size: 8.7vw;
+      height: 8.7vw;
+    }
   }
 
   h3 {
@@ -33,5 +61,15 @@
     font-weight: 500;
     margin-bottom: 1rem;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width: 680px) and (max-width: 859px) {
+      font-size: 2.6rem;
+      height: 2.6rem;
+    }
+
+    @media screen and (max-width: 679px) {
+      font-size: 5.6vw;
+      height: 5.6vw;
+    }
   }
 }

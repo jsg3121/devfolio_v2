@@ -44,7 +44,7 @@ const Header: React.FC = () => {
   }, [isHide, isMobile])
 
   React.useEffect(() => {
-    document.querySelector('html')?.getAttribute('aria-mode') === 'mobile' &&
+    document.querySelector('html')?.getAttribute('data-mode') === 'mobile' &&
       setIsMobile(true)
   }, [])
 

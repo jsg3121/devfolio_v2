@@ -2,10 +2,19 @@
   width: 100vw;
   min-height: 100vh;
   position: relative;
-  padding: 8rem 5rem;
+  padding: 8rem 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+
+  @media screen and (min-width: 420px) and (max-width: 959px) {
+    padding: 8rem 3rem;
+  }
+
+  @media screen and (max-width: 419px) {
+    min-height: calc(100vh - 5rem);
+    padding: 0 1.6rem 2rem;
+  }
 
   & > h1 {
     width: 100%;
@@ -14,8 +23,23 @@
     font-weight: 900;
     position: sticky;
     left: 5rem;
-    top: 8rem;
+    top: 5rem;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+
+    @media screen and (min-width: 680px) and (max-width: 959px) {
+      height: 10.5rem;
+      top: 0;
+      padding-top: 7rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(3px);
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    @media screen and (max-width: 679px) {
+      font-size: 2.5rem;
+      height: 2.5rem;
+    }
   }
 }
 
@@ -28,6 +52,22 @@
   align-self: flex-end;
   margin-top: 2rem;
   margin-bottom: 3rem;
+
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 479px) {
+    height: 32rem;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+    align-self: flex-start;
+    margin: 0;
+  }
 }
 
 .about__content-title {
@@ -36,6 +76,15 @@
   span {
     font-size: 1rem;
     line-height: 1.1;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -47,6 +96,19 @@
     figure {
       position: relative;
     }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    width: 18rem;
+    height: 18rem;
+    flex-shrink: 0;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 45vw;
+    height: 45vw;
+    flex-shrink: 0;
+    margin-bottom: 1.5rem;
   }
 }
 
