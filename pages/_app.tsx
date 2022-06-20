@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyle />
       <Root>
-        <Header />
+        {/* <Header /> */}
         <Component {...pageProps} />
       </Root>
     </>
