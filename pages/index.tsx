@@ -59,13 +59,13 @@ const Home: NextPage = () => {
 
   return (
     <div className="scoll_snap">
+      <Background />
       {/* <Introduce />
       <AboutMe />
       <Skills />
       <Project />
       <Contact />
       <Footer /> */}
-      <Background />
     </div>
   )
 }
