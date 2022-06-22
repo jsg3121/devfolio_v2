@@ -1,10 +1,12 @@
-import { ContactShadows, Environment, ScrollControls } from '@react-three/drei'
+import { ContactShadows, Scroll, ScrollControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { EffectComposer, SSAO } from '@react-three/postprocessing'
-import { Bubbles, Content } from 'components'
+import { Bubbles } from 'components'
 import isEqual from 'fast-deep-equal'
 import React from 'react'
 import background from 'styles/background.module.scss'
+import AboutMe from './AboutMe'
+import Introduce from './Introduce'
 
 const Background: React.FC = () => {
   return (
@@ -15,9 +17,9 @@ const Background: React.FC = () => {
         gl={{ antialias: false }}
         camera={{ fov: 50, position: [0, 0, 80], near: 20, far: 150 }}
       >
-        <color attach="background" args={['#f0f0f0']} />
+        <color attach="background" args={['#ffffff']} />
         <ambientLight intensity={1.5} />
-        <pointLight position={[100, 100, 100]} intensity={20} color="red" />
+        <pointLight position={[100, 100, 100]} intensity={20} color="blue" />
         <Bubbles />
         <ContactShadows
           position={[0, -30, 0]}
@@ -32,9 +34,15 @@ const Background: React.FC = () => {
             radius={0.1}
             intensity={20}
             luminanceInfluence={0.1}
-            color="red"
+            color="blue"
           />
         </EffectComposer>
+        <ScrollControls pages={2}>
+          <Scroll html>
+            <Introduce />
+            <AboutMe />
+          </Scroll>
+        </ScrollControls>
       </Canvas>
     </div>
   )

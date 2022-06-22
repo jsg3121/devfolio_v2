@@ -6,12 +6,12 @@ import { MathUtils } from 'three'
 
 interface BubblesProps {}
 
-const particles = Array.from({ length: 150 }, () => ({
+const particles = Array.from({ length: 200 }, () => ({
   factor: MathUtils.randInt(20, 100),
   speed: MathUtils.randFloat(0.3, 1),
-  xFactor: MathUtils.randFloatSpread(80),
-  yFactor: MathUtils.randFloatSpread(80),
-  zFactor: MathUtils.randFloatSpread(80),
+  xFactor: MathUtils.randFloatSpread(100),
+  yFactor: MathUtils.randFloatSpread(100),
+  zFactor: MathUtils.randFloatSpread(100),
 }))
 
 const Bubble: React.FC = (props) => {
@@ -21,6 +21,7 @@ const Bubble: React.FC = (props) => {
     const t = factor + state.clock.elapsedTime * (speed / 2)
     if (ref.current) {
       ref.current.scale.setScalar(Math.max(1, Math.cos(t) * 0.1))
+
       ref.current.position.set(
         Math.cos(t) +
           Math.sin(t * 1) / 10 +
@@ -50,6 +51,13 @@ const Bubbles: React.FC<BubblesProps> = (props) => {
       ref.current.rotation.y = MathUtils.damp(
         ref.current.rotation.y,
         (-state.mouse.x * Math.PI) / 6,
+        2.75,
+        delta
+      )
+
+      ref.current.rotation.x = MathUtils.damp(
+        ref.current.rotation.x,
+        (-state.mouse.y * Math.PI) / 6,
         2.75,
         delta
       )
