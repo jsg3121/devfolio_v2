@@ -1,5 +1,11 @@
-import { ContactShadows, Scroll, ScrollControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import {
+  ContactShadows,
+  Html,
+  OrbitControls,
+  Scroll,
+  ScrollControls,
+} from '@react-three/drei'
+import { Canvas, RootState } from '@react-three/fiber'
 import { EffectComposer, SSAO } from '@react-three/postprocessing'
 import { Bubbles } from 'components'
 import { AboutMe, Contact, Footer, Introduce, Project, Skills } from 'container'
@@ -12,7 +18,16 @@ import React from 'react'
 import background from 'styles/background.module.scss'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin)
+
 const Home: NextPage = () => {
+  const scrollRef = React.useRef<HTMLDivElement>(null)
+
+  const handleCreate = React.useCallback((state: RootState) => {
+    if (scrollRef.current) {
+      if (state.events.connect) state.events.connect(scrollRef.current)
+    }
+  }, [])
+
   React.useEffect(() => {
     const windowWidth = window.innerWidth
     if (windowWidth >= 680) {
@@ -26,6 +41,7 @@ const Home: NextPage = () => {
     <div className={background.container}>
       <React.Suspense>
         <Canvas
+          onCreated={handleCreate}
           shadows
           dpr={[1, 2]}
           gl={{ antialias: false }}
@@ -51,18 +67,28 @@ const Home: NextPage = () => {
               color="blue"
             />
           </EffectComposer>
-          <ScrollControls pages={0} damping={100}>
+          <OrbitControls
+            enableZoom={false}
+            autoRotate
+            autoRotateSpeed={0.0}
+            rotateSpeed={0.3}
+            dampingFactor={0.5}
+            minPolarAngle={-Math.PI / 2}
+            maxPolarAngle={Math.PI / 1.7}
+            makeDefault
+          />
+          <ScrollControls pages={7.3} damping={100}>
             <Scroll html>
               <Introduce />
+              <AboutMe />
+              <Skills />
+              <Project />
+              <Contact />
+              <Footer />
             </Scroll>
           </ScrollControls>
         </Canvas>
       </React.Suspense>
-      <AboutMe />
-      <Skills />
-      <Project />
-      {/* <Contact /> */}
-      <Footer />
     </div>
   )
 }
