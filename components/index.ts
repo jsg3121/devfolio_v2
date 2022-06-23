@@ -6,5 +6,6 @@ export { default as HeaderNav } from './src/HeaderNav'
 export { default as HeaderSNB } from './src/HeaderSNB'
 
 export * from './src/project'
-export * from './src/aboutMe'
+export * from './src/header'
 export * from './src/background'
+export * from './src/three'

@@ -6,21 +6,22 @@ import { MathUtils } from 'three'
 
 interface BubblesProps {}
 
-const particles = Array.from({ length: 200 }, () => ({
+const particles = Array.from({ length: 180 }, () => ({
   factor: MathUtils.randInt(20, 100),
   speed: MathUtils.randFloat(0.3, 1),
-  xFactor: MathUtils.randFloatSpread(100),
-  yFactor: MathUtils.randFloatSpread(100),
-  zFactor: MathUtils.randFloatSpread(100),
+  xFactor: MathUtils.randFloatSpread(120),
+  yFactor: MathUtils.randFloatSpread(120),
+  zFactor: MathUtils.randFloatSpread(120),
 }))
 
 const Bubble: React.FC = (props) => {
   const { factor, speed, xFactor, yFactor, zFactor } = props as any
   const ref = React.useRef<any>(null)
+
   useFrame((state) => {
     const t = factor + state.clock.elapsedTime * (speed / 2)
     if (ref.current) {
-      ref.current.scale.setScalar(Math.max(1, Math.cos(t) * 0.1))
+      ref.current.scale.setScalar(Math.max(1.3, Math.cos(t) * 1.8))
 
       ref.current.position.set(
         Math.cos(t) +
@@ -44,7 +45,7 @@ const Bubble: React.FC = (props) => {
   return <Instance ref={ref} />
 }
 
-const Bubbles: React.FC<BubblesProps> = (props) => {
+const Bubbles: React.FC<BubblesProps> = () => {
   const ref = React.useRef<any>(null)
   useFrame((state, delta) => {
     if (ref.current) {
@@ -64,19 +65,24 @@ const Bubbles: React.FC<BubblesProps> = (props) => {
     }
   })
   return (
-    <Instances
-      limit={particles.length}
-      ref={ref}
-      castShadow
-      receiveShadow
-      position={[0, 0, 0]}
-    >
-      <sphereGeometry args={[1, 32, 32]} />
-      <meshStandardMaterial roughness={0} color="#efefef" />
-      {particles.map((data, i) => (
-        <Bubble key={i} {...data} />
-      ))}
-    </Instances>
+    <group>
+      <color attach="background" args={['#ffffff']} />
+      <ambientLight intensity={1.5} />
+      <pointLight position={[100, 100, 100]} intensity={50} color="blue" />
+      <Instances
+        limit={particles.length}
+        ref={ref}
+        castShadow
+        receiveShadow
+        position={[0, 0, 0]}
+      >
+        <sphereGeometry args={[1, 32, 32]} />
+        <meshStandardMaterial roughness={0} color="#efefef" />
+        {particles.map((data, i) => (
+          <Bubble key={i} {...data} />
+        ))}
+      </Instances>
+    </group>
   )
 }
 

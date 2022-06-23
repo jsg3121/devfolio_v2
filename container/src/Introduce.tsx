@@ -10,7 +10,7 @@ const Introduce: React.FC = () => {
     gsap.to(typingRef.current, {
       text: 'FrontEnd Developer',
       duration: 2,
-      delay: 0.5,
+      delay: 1,
       ease: 'none',
     })
 
