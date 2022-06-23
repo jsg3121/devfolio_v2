@@ -24,13 +24,13 @@ const ImageItem: React.FC<ImageProps> = (props) => {
     imageRef.current.position.y = MathUtils.damp(
       imageRef.current.position.y,
       visible.current ? 0 : -height / 11 + 1,
-      4,
+      7.3,
       delta
     )
     imageRef.current.material.zoom = MathUtils.damp(
       imageRef.current.material.zoom,
       visible.current ? 1 : 2,
-      4,
+      7.3,
       delta
     )
   })

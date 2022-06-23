@@ -18,6 +18,8 @@ const Home: NextPage = () => {
     const windowWidth = window.innerWidth
     if (windowWidth >= 680) {
       document.querySelector('html')?.setAttribute('data-mode', 'desktop')
+    } else if (windowWidth < 680 && windowWidth >= 420) {
+      document.querySelector('html')?.setAttribute('data-mode', 'tablet')
     } else {
       document.querySelector('html')?.setAttribute('data-mode', 'mobile')
     }
