@@ -5,7 +5,6 @@
   padding: 8rem 3rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
 
   @media screen and (min-width: 420px) and (max-width: 959px) {
     padding: 8rem 3rem;
@@ -23,15 +22,13 @@
     font-weight: 900;
     position: sticky;
     left: 5rem;
-    top: 5rem;
+    top: 8rem;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
 
     @media screen and (min-width: 680px) and (max-width: 959px) {
       height: 10.5rem;
       top: 0;
       padding-top: 7rem;
-      background-color: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(3px);
       overflow: hidden;
       z-index: 10;
     }
@@ -44,110 +41,23 @@
 }
 
 .about__content {
-  width: calc(100% - 18rem);
-  height: 20rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
   align-self: flex-end;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  background-color: rgba(244, 237, 255, 0.7);
+  padding: 1rem;
+
+  span {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 
   @media screen and (min-width: 480px) and (max-width: 959px) {
     width: 100%;
-    padding: 0 1rem;
     justify-content: space-between;
   }
 
   @media screen and (max-width: 479px) {
-    height: 32rem;
     width: 100%;
-    padding: 0 1rem;
-    justify-content: flex-end;
-    flex-wrap: wrap-reverse;
-    align-self: flex-start;
+    align-self: flex-end;
     margin: 0;
-  }
-}
-
-.about__content-title {
-  width: 65%;
-
-  span {
-    font-size: 1rem;
-    line-height: 1.1;
-  }
-
-  @media screen and (min-width: 480px) and (max-width: 959px) {
-    margin-right: 1rem;
-  }
-
-  @media screen and (max-width: 479px) {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-.about__content-profile {
-  width: 20rem;
-  height: 20rem;
-
-  picture {
-    figure {
-      position: relative;
-    }
-  }
-
-  @media screen and (min-width: 480px) and (max-width: 959px) {
-    width: 18rem;
-    height: 18rem;
-    flex-shrink: 0;
-  }
-
-  @media screen and (max-width: 479px) {
-    width: 45vw;
-    height: 45vw;
-    flex-shrink: 0;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.about__content-history {
-  width: calc(100% - 18rem);
-
-  h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    width: calc(100% - 2rem);
-    padding-left: 2rem;
-
-    li {
-      width: 100%;
-      display: flex;
-      align-items: flex-end;
-      margin-bottom: 0.5rem;
-
-      h3 {
-        font-size: 1rem;
-        width: 8rem;
-        position: relative;
-
-        &::before {
-          content: '\003A';
-          width: 1rem;
-          font-size: 1rem;
-          position: absolute;
-          right: 0;
-        }
-      }
-      p,
-      a {
-        font-size: 1rem;
-      }
-    }
   }
 }

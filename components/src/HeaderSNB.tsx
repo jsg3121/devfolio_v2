@@ -1,7 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import header from 'styles/header.module.scss'
-import { HeaderFile, HeaderIcon } from './aboutMe'
+import { HeaderFile, HeaderIcon } from './header'
 
 const HeaderSNB: React.FC = () => {
   return (
