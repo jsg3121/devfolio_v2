@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "ANALYZE=true NODE_ENV='production' next build",
-    "start": "ANALYZE=true NODE_ENV='production' next build && next start",
+    "start": "next build && next start",
     "lint": "next lint"
   },
   "dependencies": {

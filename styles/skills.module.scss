@@ -1,6 +1,6 @@
 .skills {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 8rem 5rem 0;
   position: relative;
 
@@ -17,8 +17,9 @@
 }
 
 .skills__content {
-  width: calc(100% - 18rem);
+  width: 100%;
   float: right;
+
   ul {
     width: 100%;
     display: flex;
