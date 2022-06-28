@@ -16,4 +16,14 @@
     display: flex;
     flex-wrap: nowrap;
   }
+
+  @media screen and (pointer: coarse) {
+    width: 100vw;
+    height: 200vh;
+
+    & > div {
+      display: block;
+      flex-wrap: unset;
+    }
+  }
 }

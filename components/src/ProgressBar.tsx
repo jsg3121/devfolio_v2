@@ -30,6 +30,11 @@ const Progress = styled.div<ProgressProps>`
   display: flex;
   align-items: center;
   box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: 419px) {
+    width: calc(100% - 6.6rem);
+    margin: 0 0.7rem;
+  }
 `
 
 const ProgressBar: React.FC<ProgressBarProps> = (props) => {

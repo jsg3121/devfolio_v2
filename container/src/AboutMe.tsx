@@ -9,9 +9,10 @@ const AboutMe: React.FC = () => {
   const profileRef1 = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
-    gsap.to(profileRef2.current, {
-      y: '8vh',
-      duration: 1,
+    gsap.to(profileRef1.current, {
+      y: '20vh',
+      duration: 1.3,
+      delay: 0.3,
       ease: 'power4.out',
       scrollTrigger: {
         trigger: document.querySelector('#aboutMe'),
@@ -19,11 +20,9 @@ const AboutMe: React.FC = () => {
         end: () => window.innerHeight / 2,
       },
     })
-
-    gsap.to(profileRef1.current, {
-      y: '20vh',
-      duration: 1.3,
-      delay: 0.3,
+    gsap.to(profileRef2.current, {
+      y: '6vh',
+      duration: 1,
       ease: 'power4.out',
       scrollTrigger: {
         trigger: document.querySelector('#aboutMe'),

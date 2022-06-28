@@ -34,8 +34,10 @@
     }
 
     @media screen and (max-width: 679px) {
+      width: 20rem;
       font-size: 2.5rem;
       height: 2.5rem;
+      left: 1.6rem;
     }
   }
 }
@@ -83,8 +85,8 @@
 }
 
 .about__content-profile {
-  width: clamp(16rem, 33vw, 25rem);
-  height: clamp(16rem, 33vw, 25rem);
+  width: clamp(16rem, 33vw, 22rem);
+  height: clamp(16rem, 33vw, 22rem);
   position: absolute;
   will-change: transform;
   transform: translate(0, 100vh);
@@ -103,16 +105,14 @@
   }
 
   @media screen and (max-width: 479px) {
-    width: 45vw;
-    height: 45vw;
-    flex-shrink: 0;
-    margin-bottom: 1.5rem;
+    right: unset;
+    left: 1.6rem;
   }
 }
 
 .about__content-profile2 {
-  width: clamp(16rem, 30vw, 22rem);
-  height: clamp(16rem, 30vw, 22rem);
+  width: clamp(16rem, 30vw, 20rem);
+  height: clamp(16rem, 30vw, 20rem);
   position: absolute;
   will-change: transform;
   left: 23rem;
@@ -124,16 +124,15 @@
     }
   }
 
-  // @media screen and (min-width: 480px) and (max-width: 959px) {
-  //   width: 18rem;
-  //   height: 18rem;
-  //   flex-shrink: 0;
-  // }
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    width: 18rem;
+    height: 18rem;
+    flex-shrink: 0;
+  }
 
-  // @media screen and (max-width: 479px) {
-  //   width: 45vw;
-  //   height: 45vw;
-  //   flex-shrink: 0;
-  //   margin-bottom: 1.5rem;
-  // }
+  @media screen and (max-width: 479px) {
+    left: unset;
+    right: 1.6rem;
+    top: 40vh;
+  }
 }

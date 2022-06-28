@@ -25,19 +25,25 @@ const Home: NextPage = () => {
   }, [])
 
   React.useEffect(() => {
-    gsap.to('.horizontal-scroll', {
-      xPercent: -100,
-      x: () => window.innerWidth,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.horizontal-scroll',
-        start: 'top top',
-        end: () => window.innerWidth * 2,
-        scrub: 1,
-        pin: true,
-        invalidateOnRefresh: true,
-      },
-    })
+    if (
+      !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      gsap.to('.horizontal-scroll', {
+        xPercent: -100,
+        x: () => window.innerWidth,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.horizontal-scroll',
+          start: 'top top',
+          end: () => window.innerWidth * 2,
+          scrub: 1,
+          pin: true,
+          invalidateOnRefresh: true,
+        },
+      })
+    }
   }, [])
 
   return (
@@ -69,7 +75,7 @@ const Home: NextPage = () => {
           <Skills />
         </div>
       </div>
-      <Project />
+      {/* <Project /> */}
     </>
   )
 }
