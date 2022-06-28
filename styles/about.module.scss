@@ -20,8 +20,8 @@
     font-size: 3.5rem;
     height: 3.5rem;
     font-weight: 900;
-    position: sticky;
-    left: 5rem;
+    position: absolute;
+    left: 3rem;
     top: 8rem;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
 
@@ -34,21 +34,24 @@
     }
 
     @media screen and (max-width: 679px) {
+      width: 20rem;
       font-size: 2.5rem;
       height: 2.5rem;
+      left: 1.6rem;
     }
   }
 }
 
 .about__content {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
   align-self: flex-end;
-  background-color: rgba(244, 237, 255, 0.7);
-  padding: 1rem;
-
-  span {
-    font-weight: 500;
-    font-size: 1.2rem;
-  }
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  z-index: 100;
 
   @media screen and (min-width: 480px) and (max-width: 959px) {
     width: 100%;
@@ -59,5 +62,77 @@
     width: 100%;
     align-self: flex-end;
     margin: 0;
+  }
+}
+
+.about__content-title {
+  width: 100%;
+
+  span {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.about__content-profile {
+  width: clamp(16rem, 33vw, 22rem);
+  height: clamp(16rem, 33vw, 22rem);
+  position: absolute;
+  will-change: transform;
+  transform: translate(0, 100vh);
+  right: 8rem;
+
+  picture {
+    figure {
+      position: relative;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    width: 18rem;
+    height: 18rem;
+    flex-shrink: 0;
+  }
+
+  @media screen and (max-width: 479px) {
+    right: unset;
+    left: 1.6rem;
+  }
+}
+
+.about__content-profile2 {
+  width: clamp(16rem, 30vw, 20rem);
+  height: clamp(16rem, 30vw, 20rem);
+  position: absolute;
+  will-change: transform;
+  left: 23rem;
+  transform: translate(0, 100vh);
+
+  picture {
+    figure {
+      position: relative;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 959px) {
+    width: 18rem;
+    height: 18rem;
+    flex-shrink: 0;
+  }
+
+  @media screen and (max-width: 479px) {
+    left: unset;
+    right: 1.6rem;
+    top: 40vh;
   }
 }

@@ -1,7 +1,7 @@
 .skills {
   width: 100vw;
   min-height: 100vh;
-  padding: 8rem 5rem 0;
+  padding: 8rem 3rem 0;
   position: relative;
 
   & > h1 {
@@ -9,10 +9,11 @@
     height: 3.5rem;
     margin-bottom: 2rem;
     font-weight: 900;
-    left: 5rem;
-    top: 8rem;
-    position: sticky;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  @media screen and (max-width: 679px) {
+    padding: 1.6rem;
   }
 }
 
@@ -32,6 +33,14 @@
       align-items: center;
       height: 5rem;
       margin-bottom: 1rem;
+
+      @media screen and (max-width: 419px) {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 419px) {
+      justify-content: space-around;
     }
   }
 }
@@ -39,4 +48,10 @@
 .skills__content-icon {
   width: 4rem;
   height: 4rem;
+  flex-shrink: 0;
+
+  @media screen and (max-width: 419px) {
+    width: 3rem;
+    height: 3rem;
+  }
 }
