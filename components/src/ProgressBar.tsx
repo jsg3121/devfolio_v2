@@ -14,7 +14,7 @@ interface ProgressProps {
 
 const Progress = styled.div<ProgressProps>`
   height: 0.9rem;
-  width: 11rem;
+  width: calc(100% - 10rem);
   margin: 0 1rem;
   border-radius: 0.2rem;
   background-color: ${(props) => {
