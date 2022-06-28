@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         background-color: #ffffff;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
     
     body {
@@ -56,6 +57,10 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         height:100%;
         position: relative;
+    }
+
+    html.project__detail--show{
+        overflow: hidden !important;
     }
 
     * {
