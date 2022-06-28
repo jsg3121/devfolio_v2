@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           <Skills />
         </div>
       </div>
-      {/* <Project /> */}
+      <Project />
     </>
   )
 }
