@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
-      <Root>
+      <Root id="root">
         {/* <Header /> */}
         <Component {...pageProps} />
       </Root>

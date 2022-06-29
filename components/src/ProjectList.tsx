@@ -5,18 +5,13 @@ import Image from './Image'
 
 interface ProjectListProps {
   data: ProjectTypes
-  onClick: (index: number) => void
 }
 
 const ProjectList: React.FC<ProjectListProps> = (props) => {
-  const { data, onClick } = props
-
-  const hadleClick = React.useCallback(() => {
-    onClick(data.index)
-  }, [onClick, data])
+  const { data } = props
 
   return (
-    <div className={project['project__list-item']} onClick={hadleClick}>
+    <div className={project['project__list-item']}>
       <div className={project['project__list-item--text']}>
         <h2>{data.name}</h2>
         <p>{data.mainDescription}</p>

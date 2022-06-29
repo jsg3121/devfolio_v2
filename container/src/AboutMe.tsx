@@ -9,6 +9,7 @@ const AboutMe: React.FC = () => {
   const profileRef1 = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
+    const container = document.querySelector('.container')
     gsap.to(profileRef1.current, {
       y: '20vh',
       duration: 1.3,
@@ -18,8 +19,10 @@ const AboutMe: React.FC = () => {
         trigger: document.querySelector('#aboutMe'),
         start: () => window.innerHeight / 2,
         end: () => window.innerHeight / 2,
+        scroller: container,
       },
     })
+
     gsap.to(profileRef2.current, {
       y: '6vh',
       duration: 1,
@@ -28,6 +31,7 @@ const AboutMe: React.FC = () => {
         trigger: document.querySelector('#aboutMe'),
         start: () => window.innerHeight / 2,
         end: () => window.innerHeight / 2,
+        scroller: container,
       },
     })
   }, [])
