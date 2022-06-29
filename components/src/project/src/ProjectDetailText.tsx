@@ -6,26 +6,26 @@ import { Image } from 'components'
 
 interface ProjectDetailTextProps {
   type: 'info' | 'description'
-  name: ProjectDetailTypes['name']
   date: ProjectDetailTypes['date']
   git: ProjectDetailTypes['git']
   skills: Array<string>
 }
 
 const ProjectDetailText: React.FC<ProjectDetailTextProps> = (props) => {
-  const { name, date, git, skills } = props
+  const { date, git, skills } = props
 
   return (
-    <div className={project['detail__slide-info--text']}>
-      <h1>{name}</h1>
-      <h2>진행 기간 : {date}</h2>
-      <h2>
-        GitHub :
-        <Link href={git}>
-          <a target="_blank">{git}</a>
-        </Link>
-      </h2>
-      <div className={project['detail__slide-info--text-skills']}>
+    <>
+      <div className={project['detail__slide-info--text']}>
+        <h2>진행 기간 : {date}</h2>
+        <h2>
+          GitHub :
+          <Link href={git}>
+            <a target="_blank">{git}</a>
+          </Link>
+        </h2>
+      </div>
+      <div className={project['detail__slide-info--skills']}>
         {skills.map((item, index) => {
           return (
             <div key={index}>
@@ -40,7 +40,7 @@ const ProjectDetailText: React.FC<ProjectDetailTextProps> = (props) => {
           )
         })}
       </div>
-    </div>
+    </>
   )
 }
 

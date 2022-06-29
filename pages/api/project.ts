@@ -5,8 +5,9 @@ const projectData: Array<ProjectTypes> = [
   {
     index: 1,
     name: 'Project Culture',
-    mainDescription:
-      '대학교 재학중 팀 프로젝트로 진행했던 문화공연 정보 공유 서비스를 vue를 이용하여 새롭게 만들었습니다.',
+    mainDescription: `대학교 재학중 팀 프로젝트로 진행했던 문화공연 정보 공유 서비스를 vue를 이용하여 새롭게 만들었습니다.
+    vue 프레임워크의 기본적인 라이프 사이클을 이해하며 json 데이터를 이용한 api 비동기 호출과
+    사용자가 시각적으로 느낄 수 있는 슬라이드, 무한 스크롤등의 기능을 직접 구현하였습니다.`,
     detail: {
       name: 'Project Culture',
       date: '2020. 08 ~ 2020. 10',
@@ -14,9 +15,9 @@ const projectData: Array<ProjectTypes> = [
       skills: ['vue', 'javascript', 'scss'],
       detailDescription: [''],
       detailThumbnail: [
-        '/culture_detail_101.webp',
-        '/culture_detail_201.webp',
-        '/culture_detail_202.webp',
+        '/culture_detail_100.webp',
+        '/culture_detail_200.webp',
+        '/culture_detail_300.webp',
       ],
     },
     thumbnail: '/culture.webp',
