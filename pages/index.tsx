@@ -3,14 +3,14 @@ import { EffectComposer, SSAO } from '@react-three/postprocessing'
 import { Bubbles } from 'components'
 import { AboutMe, Introduce, Project, Skills } from 'container'
 import { gsap } from 'gsap'
-import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import TextPlugin from 'gsap/dist/TextPlugin'
 import type { NextPage } from 'next'
 import React from 'react'
+import Scrollbar from 'smooth-scrollbar'
 import background from 'styles/background.module.scss'
 
-gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin)
+gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const Home: NextPage = () => {
   React.useEffect(() => {
@@ -25,25 +25,33 @@ const Home: NextPage = () => {
   }, [])
 
   React.useEffect(() => {
-    if (
-      !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      gsap.to('.horizontal-scroll', {
-        xPercent: -100,
-        x: () => window.innerWidth,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.horizontal-scroll',
-          start: 'top top',
-          end: () => window.innerWidth * 2,
-          scrub: 1,
-          pin: true,
-          invalidateOnRefresh: true,
-        },
-      })
-    }
+    const container = document.querySelector('.container') as any
+    const content = document.querySelector('.content') as any
+
+    const scrollbar = Scrollbar.init(content, {
+      damping: 0.05,
+      delegateTo: document,
+    })
+    scrollbar.track.yAxis.element.remove()
+
+    ScrollTrigger.scrollerProxy(container, {
+      scrollTop(value) {
+        if (arguments.length && value) {
+          scrollbar.scrollTop = value
+        }
+        return scrollbar.scrollTop
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        }
+      },
+    })
+
+    scrollbar.addListener(ScrollTrigger.update)
   }, [])
 
   return (
@@ -68,14 +76,14 @@ const Home: NextPage = () => {
           </EffectComposer>
         </Canvas>
       </div>
-      <Introduce />
-      <div className={`${background.horizontal} horizontal-scroll`}>
-        <div>
+      <div className={`${background.content} content`}>
+        <div className="container">
+          <Introduce />
           <AboutMe />
           <Skills />
+          <Project />
         </div>
       </div>
-      <Project />
     </>
   )
 }

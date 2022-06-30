@@ -13,6 +13,7 @@ const Percentage: React.FC<PercentageProps> = (props) => {
   const percentRef = React.useRef<HTMLParagraphElement>(null)
 
   React.useEffect(() => {
+    const container = document.querySelector('.container')
     gsap.from(percentRef.current, {
       textContent: 0,
       duration: 1,
@@ -22,6 +23,7 @@ const Percentage: React.FC<PercentageProps> = (props) => {
         trigger: document.querySelector('.skill__content'),
         start: () => window.innerHeight * 2,
         end: () => window.innerHeight * 2,
+        scroller: container,
       },
     })
   }, [])

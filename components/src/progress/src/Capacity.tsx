@@ -27,6 +27,8 @@ const CapacityContainer = styled.i<CapacityProps>`
 `
 const percentCount = (ref?: HTMLElement, capacity?: number) => {
   if (ref) {
+    const container = document.querySelector('.container')
+
     gsap.to(ref, {
       width: `${capacity}%`,
       duration: 1,
@@ -34,6 +36,7 @@ const percentCount = (ref?: HTMLElement, capacity?: number) => {
         trigger: document.querySelector('.skill__content'),
         start: () => window.innerHeight * 2,
         end: () => window.innerHeight * 2,
+        scroller: container,
       },
     })
   }
