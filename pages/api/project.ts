@@ -13,7 +13,14 @@ const projectData: Array<ProjectTypes> = [
       date: '2020. 08 ~ 2020. 10',
       git: 'https://github.com/jsg3121/CultureProject.git',
       skills: ['vue', 'javascript', 'scss'],
-      detailDescription: [''],
+      detailDescription: [
+        'vue 프레임워크를 이용한 웹페이지 개발했습니다.',
+        'vuex를 이용한 상태관리로 사용자가 검색한 문화행사 리스트 구현하였습니다.',
+        '스크롤 이벤트를 통한 지속적인 데이터 갱신으로 무한스크롤 구현하였습니다.',
+        '카테고리 별 문화행사를 찾아 볼 수 있도록 검색기능 구현하였습니다.',
+        '자주 보고 많이 사용하는 슬라이드 기능을 직접 구현하여 해당 기능의 로직을 이해했습니다.',
+      ],
+      members: ['개발 : 장선규', '디자인 : 김혜인'],
       detailThumbnail: [
         '/culture_detail_100.webp',
         '/culture_detail_200.webp',
@@ -25,18 +32,24 @@ const projectData: Array<ProjectTypes> = [
   {
     index: 2,
     name: 'Devfolio v1',
-    mainDescription:
-      '졸업 후 그동안 개발자로 일하고 개인적으로 새롭게 배우며 발전된 본인을 알리기 위해 만든 사이트 입니다.',
+    mainDescription: `vue를 이용하여 본인을 알리고 그동안 배운 기술을 활용하기 위해 제작한 개인 포트폴리오 사이트 입니다.
+    시각적 효과를 주는 인트로 모션, 프로젝트들을 소개하는 페이지의 슬라이드 모션 등을 직접 구현하며 제작하였습니다.
+    `,
     detail: {
       name: 'Devfolio v1',
       date: '2020. 08 ~ 2020. 10',
       git: 'https://github.com/jsg3121/about-me',
       skills: ['vue', 'javascript', 'scss'],
-      detailDescription: [''],
+      members: ['개발 : 장선규', '디자인 : 금혜주'],
+      detailDescription: [
+        '일을 하거나 스터디를 하며 배우고 쌓은 기술들을 활용하여 사이트를 구축했습니다.',
+        '최소한의 라이브러리 사용으로 기본적인 이벤트, 모션등의 효과를 직접 구현하여 해당 기능의 로직을 이해했습니다.',
+        '모바일, 태블릿 등에서도 확인 할 수 있도록 반응형으로 구현하며 javascript뿐만 아니라 css 스타일 적용에 대한 부분을 이해했습니다.',
+      ],
       detailThumbnail: [
-        '/devfolio_v1_detail_301.webp',
-        '/devfolio_v1_detail_302.webp',
-        '/devfolio_v1_detail_401.webp',
+        '/devfolio_v1_detail_100.webp',
+        '/devfolio_v1_detail_200.webp',
+        '/devfolio_v1_detail_500.webp',
       ],
     },
     thumbnail: '/devfolio_v1.webp',
@@ -44,15 +57,21 @@ const projectData: Array<ProjectTypes> = [
   {
     index: 3,
     name: 'Best Weather',
-    mainDescription:
-      '새로운 기술을 사용해보고 개발 역량을 늘리기 위해 일정기간을 잡고 기간안에 목표치에 달성할 수 있을만큼 만들어보자는 도전을 하며 제작한 사이트 입니다.',
+    mainDescription: `특정 기간을 목표로 잡아 그동안의 기술을 이해하고 사용하며 기간 안에 최대한 목표에 가깝게 만들기 위한 챌린지 형식의 프로젝트 입니다.
+    vue의 버전이 올라가며 새롭게 추가된 Composition API를 이해하고 사용하기 위해 프로젝트를 만들었습니다. `,
     detail: {
       name: 'Best Weather',
       date: '2021. 07 ~ 2021. 12',
       git: 'https://github.com/jsg3121/WeatherVue',
       skills: ['vue', 'typescript', 'node', 'prisma', 'mysql', 'docker'],
-      detailDescription: ['', ''],
-      detailThumbnail: ['/weather_detail_101.webp', '/weather_detail_102.webp'],
+      members: ['개발 : 장선규', '디자인 : 금혜주'],
+      detailDescription: [
+        'docker와 prisma, mysql을 이용해 기상 정보를 가져오고 가공할 수 있도록 데이터베이스를 구축하였습니다.',
+        'node.js를 이용하여 client에서 요청하는 데이터를 데이터베이스와 연결, 기상정보 API를 가져와 필요한 데이터를 가공후 client에게 전달해 주는 backend 서버를 구현하였습니다.',
+        '모바일, 데스크탑 화면에 맞도록 반응형으로 페이지를 구현하였습니다.',
+        '위치 정보를 이용하여 데이터베이스 내 좌표값을 계산해 현재 사용자가 접속한 위치를 표시할 수 있도록 구현했습니다.',
+      ],
+      detailThumbnail: ['/weather_detail_100.webp'],
     },
     thumbnail: '/weather.webp',
   },

@@ -6,6 +6,7 @@ declare global {
     date: string
     skills: Array<string>
     detailThumbnail: Array<string>
+    members: Array<string>
   }
   export interface ProjectTypes {
     index: number

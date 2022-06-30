@@ -1,8 +1,8 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import project from 'styles/project.module.scss'
-import { ProjectDetailText } from './project'
-import Image from './Image'
+import ProjectDetailText from './ProjectDetailText'
+import Image from '../../Image'
 
 interface ProjectListProps {
   data: ProjectTypes
@@ -30,9 +30,10 @@ const ProjectDetail: React.FC<ProjectListProps> = (props) => {
         })}
       </div>
       <ProjectDetailText
-        type="description"
         date={data.detail.date}
+        description={data.detail.detailDescription}
         git={data.detail.git}
+        members={data.detail.members}
         skills={data.detail.skills}
       />
     </div>
