@@ -30,7 +30,6 @@ const Home: NextPage = () => {
 
     const scrollbar = Scrollbar.init(content, {
       damping: 0.05,
-      delegateTo: document,
     })
     scrollbar.track.yAxis.element.remove()
 

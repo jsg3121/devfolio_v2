@@ -14,8 +14,7 @@ interface ArticleProps {
 }
 
 const ArticleContent = styled.div<ArticleProps>`
-  background: rgba(0, 0, 0, 0.5)
-    ${(props) => {
+  background: ${(props) => {
       return `url(${props.background})`
     }}
     center/contain no-repeat;
@@ -27,45 +26,73 @@ const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
   React.useEffect(() => {
     const container = document.querySelector('.container')
     const contents = gsap.utils.toArray<Element>('.project__content')
-    const titles = gsap.utils.toArray<Element>('#project .project__title h1')
-    const numbers = gsap.utils.toArray<Element>('#project .project__title h2')
+    const backgrounds = gsap.utils.toArray<Element>('.project__title--main')
+    const names = gsap.utils.toArray<Element>('.project__title--main div p')
 
-    contents.forEach((content) => {
+    const titles = gsap.utils.toArray<Element>(
+      '#project .project__title--sub h1'
+    )
+
+    contents.forEach((content, index) => {
       gsap.to(content, {
         scrollTrigger: {
           trigger: content,
           start: 'top top',
-          end: '+=50%',
+          end: '+=100%',
           scrub: true,
           pin: true,
           scroller: container,
         },
       })
+
+      gsap.to(content, {
+        background: `rgba(0,0,0,0)`,
+        duration: 0.4,
+        scrollTrigger: {
+          trigger: content,
+          start: 'top top',
+          end: '+=50%',
+          scrub: true,
+          scroller: container,
+        },
+      })
+
+      gsap.to(backgrounds[index], {
+        opacity: 1,
+        duration: 0.4,
+        scrollTrigger: {
+          trigger: content,
+          start: 'top top',
+          end: '+=50%',
+          scrub: true,
+          scroller: container,
+        },
+      })
     })
 
-    titles.forEach((title) => {
+    titles.forEach((title, index) => {
       gsap.to(title, {
         y: '-100%',
         opacity: 0,
         scrollTrigger: {
           trigger: title,
           scrub: true,
-          start: 'top ',
-          end: '+=20%',
+          start: `${50 + index * 10}% center`,
+          end: '+=50%',
           scroller: container,
         },
       })
     })
 
-    numbers.forEach((number) => {
-      gsap.to(number, {
-        y: '-100%',
-        opacity: 0,
+    names.forEach((name, index) => {
+      gsap.to(name, {
+        y: '0',
+        opacity: 1,
         scrollTrigger: {
-          trigger: number,
+          trigger: name,
           scrub: true,
-          start: '+=60% top',
-          end: '+=20%',
+          start: `${(index / names.length) * 200 + 3}%`,
+          end: `+=50%`,
           scroller: container,
         },
       })
@@ -74,15 +101,33 @@ const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
 
   return (
     <article>
-      <ArticleContent
-        className={`${project.project__content} project__content`}
-        background={data.thumbnail}
-      >
-        <div className={`${project.project__title} project__title`}>
-          <h1>Porject</h1>
-          <h2>.0{data.index}</h2>
+      <div className={`${project.project__content} project__content`}>
+        <ArticleContent
+          className={`${project['project__title--main']} project__title--main`}
+          background={data.thumbnail}
+        >
+          <div>
+            {data.name.split('').map((word, index) => {
+              return word === ' ' ? (
+                <p key={index}>&nbsp;</p>
+              ) : (
+                <p key={index}>{word}</p>
+              )
+            })}
+          </div>
+        </ArticleContent>
+        <div
+          className={`${project['project__title--sub']} project__title--sub`}
+        >
+          {`Project .0${data.index}`.split('').map((word, index) => {
+            return word === ' ' ? (
+              <h1 key={index}>&nbsp;</h1>
+            ) : (
+              <h1 key={index}>{word}</h1>
+            )
+          })}
         </div>
-      </ArticleContent>
+      </div>
       <div className={project.project__list}>
         {data && <ProjectDetail data={data} />}
       </div>
