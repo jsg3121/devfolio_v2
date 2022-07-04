@@ -1,55 +1,46 @@
 import { Image } from 'components'
 import isEqual from 'fast-deep-equal'
 import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import React from 'react'
 import aboutMe from 'styles/about.module.scss'
 
 const AboutMe: React.FC = () => {
+  const sectionRef = React.useRef<HTMLElement>(null)
   const profileRef1 = React.useRef<HTMLDivElement>(null)
   const profileRef2 = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
     const container = document.querySelector('.container')
-    const section = document.querySelector('.aboutMe')
 
-    gsap.to(section, {
-      opacity: 0,
+    gsap.to(profileRef1.current, {
+      y: '20vh',
+      duration: 1.3,
+      delay: 0.3,
+      ease: 'power4.out',
       scrollTrigger: {
-        trigger: section,
+        trigger: sectionRef.current,
         start: 'top top',
-        end: '+=50%',
-        scrub: true,
+        end: 'top top',
         scroller: container,
       },
     })
-
-    // gsap.to(profileRef1.current, {
-    //   y: '20vh',
-    //   duration: 1.3,
-    //   delay: 0.3,
-    //   ease: 'power4.out',
-    //   scrollTrigger: {
-    //     trigger: section[0],
-    //     start: 'top top',
-    //     end: 'top top',
-    //     scroller: container,
-    //   },
-    // })
-    // gsap.to(profileRef2.current, {
-    //   y: '6vh',
-    //   duration: 1,
-    //   ease: 'power4.out',
-    //   scrollTrigger: {
-    //     trigger: section[0],
-    //     start: () => window.innerHeight / 2,
-    //     end: () => window.innerHeight / 2,
-    //     scroller: container,
-    //   },
-    // })
+    gsap.to(profileRef2.current, {
+      y: '6vh',
+      duration: 1,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: 'top top',
+        scroller: container,
+      },
+    })
   }, [])
 
   return (
-    <section className={`${aboutMe.about} aboutMe`}>
+    <section className={`${aboutMe.about} aboutMe`} ref={sectionRef}>
       <h1>About Me</h1>
       <div className={aboutMe.about__content}>
         <div className={aboutMe['about__content-title']}>

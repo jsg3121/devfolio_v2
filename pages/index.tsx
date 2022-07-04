@@ -3,14 +3,12 @@ import { EffectComposer, SSAO } from '@react-three/postprocessing'
 import { Bubbles } from 'components'
 import { AboutMe, Introduce, Project, Skills } from 'container'
 import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import TextPlugin from 'gsap/dist/TextPlugin'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import type { NextPage } from 'next'
 import React from 'react'
 import Scrollbar from 'smooth-scrollbar'
 import background from 'styles/background.module.scss'
-
-gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const Home: NextPage = () => {
   React.useEffect(() => {
@@ -25,32 +23,36 @@ const Home: NextPage = () => {
   }, [])
 
   React.useEffect(() => {
-    const container = document.querySelector('.container') as any
-    const content = document.querySelector('.content') as any
+    if (typeof window !== 'undefined') {
+      gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
-    const scrollbar = Scrollbar.init(content, {
-      damping: 0.05,
-    })
-    scrollbar.track.yAxis.element.remove()
+      const container = document.querySelector('.container') as any
+      const content = document.querySelector('.content') as any
 
-    ScrollTrigger.scrollerProxy(container, {
-      scrollTop(value) {
-        if (arguments.length && value) {
-          scrollbar.scrollTop = value
-        }
-        return scrollbar.scrollTop
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        }
-      },
-    })
+      const scrollbar = Scrollbar.init(content, {
+        damping: 0.05,
+      })
+      scrollbar.track.yAxis.element.remove()
 
-    scrollbar.addListener(ScrollTrigger.update)
+      ScrollTrigger.scrollerProxy(container, {
+        scrollTop(value) {
+          if (arguments.length && value) {
+            scrollbar.scrollTop = value
+          }
+          return scrollbar.scrollTop
+        },
+        getBoundingClientRect() {
+          return {
+            top: 0,
+            left: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          }
+        },
+      })
+
+      scrollbar.addListener(ScrollTrigger.update)
+    }
   }, [])
 
   return (
