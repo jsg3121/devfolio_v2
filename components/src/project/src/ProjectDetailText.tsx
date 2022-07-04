@@ -67,7 +67,7 @@ const ProjectDetailText: React.FC<ProjectDetailTextProps> = (props) => {
               <p>GitHub</p>
               <div>
                 <Link href={git}>
-                  <a target="_blank">{git}</a>
+                  <a target="_blank">바로가기</a>
                 </Link>
               </div>
             </li>

@@ -13,29 +13,33 @@ const ProjectDetail: React.FC<ProjectListProps> = (props) => {
 
   return (
     <div className={project['project__list-item']}>
-      <h1>{data.name}</h1>
-      <h2>{data.mainDescription}</h2>
-      <div className={project['project__list--images']}>
-        {data.detail.detailThumbnail.map((detail, index) => {
-          return (
-            <Image
-              alt="detail_image"
-              src={detail}
-              layout="fill"
-              priority
-              key={index}
-              objectFit="cover"
-            />
-          )
-        })}
+      <div className={`${project['project__list-title']} project__list-title`}>
+        <h1>{data.name}</h1>
+        <h2>{data.mainDescription}</h2>
       </div>
-      <ProjectDetailText
-        date={data.detail.date}
-        description={data.detail.detailDescription}
-        git={data.detail.git}
-        members={data.detail.members}
-        skills={data.detail.skills}
-      />
+      <div className="project__list-content">
+        <div className={project['project__list--images']}>
+          {data.detail.detailThumbnail.map((detail, index) => {
+            return (
+              <Image
+                alt="detail_image"
+                src={detail}
+                layout="fill"
+                priority
+                key={index}
+                objectFit="cover"
+              />
+            )
+          })}
+        </div>
+        <ProjectDetailText
+          date={data.detail.date}
+          description={data.detail.detailDescription}
+          git={data.detail.git}
+          members={data.detail.members}
+          skills={data.detail.skills}
+        />
+      </div>
     </div>
   )
 }
