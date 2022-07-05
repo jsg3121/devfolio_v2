@@ -2,19 +2,20 @@ import { gsap } from 'gsap'
 
 export const aboutMeMotions = () => {
   const container = document.querySelector('.container')
-  const section = document.querySelector('.aboutMe')
-  const profile1 = document.querySelector('.about__content-profile')
-  const profile2 = document.querySelector('.about__content-profile2')
+  const profiles = gsap.utils.toArray<Element>('.profile')
 
-  // gsap.to(section, {
-  //   opacity: 0,
-  //   scrollTrigger: {
-  //     trigger: section,
-  //     start: 'top+=100% top',
-  //     end: '+=50%',
-  //     scrub: true,
-  //     scroller: container,
-  //     markers: true,
-  //   },
-  // })
+  profiles.forEach((profile) => {
+    gsap.to(profile, {
+      y: '20vh',
+      duration: 1.3,
+      delay: 0.3,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: profile,
+        start: 'top center',
+        scroller: container,
+        markers: true,
+      },
+    })
+  })
 }

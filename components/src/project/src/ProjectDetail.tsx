@@ -2,7 +2,7 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import project from 'styles/project.module.scss'
 import ProjectDetailText from './ProjectDetailText'
-import Image from '../../Image'
+import Image from '../../common/src/Image'
 
 interface ProjectListProps {
   data: ProjectTypes

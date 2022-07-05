@@ -2,7 +2,7 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import project from 'styles/project.module.scss'
 import Link from 'next/link'
-import { Image } from 'components'
+import { Image } from '../../common'
 
 interface ProjectDetailTextProps {
   date: ProjectDetailTypes['date']
