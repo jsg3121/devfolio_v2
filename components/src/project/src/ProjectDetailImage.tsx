@@ -1,7 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import project from 'styles/project.module.scss'
-import { Image } from 'components'
+import { Image } from '../../common'
 
 interface ProjectDetailImageProps {
   image: string

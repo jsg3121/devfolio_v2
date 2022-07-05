@@ -15,6 +15,13 @@ declare global {
     detail: ProjectDetailTypes
     thumbnail: string
   }
+
+  export interface SkillsProps {
+    name: string
+    path: string
+    capacity: number
+    grade: number
+  }
 }
 
 export {}

@@ -1,43 +1,24 @@
-import { Image } from 'components'
+import axios from 'axios'
+import { Profile } from 'components'
 import isEqual from 'fast-deep-equal'
 import React from 'react'
 import aboutMe from 'styles/about.module.scss'
-import { gsap } from 'gsap'
+import useSWR from 'swr'
 
 const AboutMe: React.FC = () => {
-  const profileRef2 = React.useRef<HTMLDivElement>(null)
-  const profileRef1 = React.useRef<HTMLDivElement>(null)
-
-  React.useEffect(() => {
-    const container = document.querySelector('.container')
-    gsap.to(profileRef1.current, {
-      y: '20vh',
-      duration: 1.3,
-      delay: 0.3,
-      ease: 'power4.out',
-      scrollTrigger: {
-        trigger: document.querySelector('#aboutMe'),
-        start: () => window.innerHeight / 2,
-        end: () => window.innerHeight / 2,
-        scroller: container,
-      },
-    })
-
-    gsap.to(profileRef2.current, {
-      y: '6vh',
-      duration: 1,
-      ease: 'power4.out',
-      scrollTrigger: {
-        trigger: document.querySelector('#aboutMe'),
-        start: () => window.innerHeight / 2,
-        end: () => window.innerHeight / 2,
-        scroller: container,
-      },
-    })
-  }, [])
+  const { data } = useSWR<Array<string>>('/api/aboutMe', async () => {
+    return await axios
+      .request({
+        method: 'GET',
+        url: '/api/aboutMe',
+      })
+      .then((res) => {
+        return res.data
+      })
+  })
 
   return (
-    <section className={aboutMe.about} id="aboutMe">
+    <section className={`${aboutMe.about}`} id="aboutMe">
       <h1>About Me</h1>
       <div className={aboutMe.about__content}>
         <div className={aboutMe['about__content-title']}>
@@ -62,12 +43,12 @@ const AboutMe: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className={aboutMe['about__content-profile']} ref={profileRef1}>
-        <Image src="/profile.webp" alt="프로필 이미지" layout="fill" />
-      </div>
-      <div className={aboutMe['about__content-profile2']} ref={profileRef2}>
-        <Image src="/profile_2.webp" alt="프로필 이미지" layout="fill" />
-      </div>
+      {data && (
+        <>
+          <Profile src={data[0]} className="about__content-profile" />
+          <Profile src={data[1]} className="about__content-profile2" />
+        </>
+      )}
     </section>
   )
 }

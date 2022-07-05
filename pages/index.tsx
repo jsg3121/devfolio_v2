@@ -1,16 +1,10 @@
 import { Canvas } from '@react-three/fiber'
 import { EffectComposer, SSAO } from '@react-three/postprocessing'
 import { Bubbles } from 'components'
-import { AboutMe, Introduce, Project, Skills } from 'container'
-import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-import TextPlugin from 'gsap/dist/TextPlugin'
+import { Container } from 'container'
 import type { NextPage } from 'next'
 import React from 'react'
-import Scrollbar from 'smooth-scrollbar'
 import background from 'styles/background.module.scss'
-
-gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const Home: NextPage = () => {
   React.useEffect(() => {
@@ -22,35 +16,6 @@ const Home: NextPage = () => {
     } else {
       document.querySelector('html')?.setAttribute('data-mode', 'mobile')
     }
-  }, [])
-
-  React.useEffect(() => {
-    const container = document.querySelector('.container') as any
-    const content = document.querySelector('.content') as any
-
-    const scrollbar = Scrollbar.init(content, {
-      damping: 0.05,
-    })
-    scrollbar.track.yAxis.element.remove()
-
-    ScrollTrigger.scrollerProxy(container, {
-      scrollTop(value) {
-        if (arguments.length && value) {
-          scrollbar.scrollTop = value
-        }
-        return scrollbar.scrollTop
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        }
-      },
-    })
-
-    scrollbar.addListener(ScrollTrigger.update)
   }, [])
 
   return (
@@ -75,14 +40,7 @@ const Home: NextPage = () => {
           </EffectComposer>
         </Canvas>
       </div>
-      <div className={`${background.content} content`}>
-        <div className="container">
-          <Introduce />
-          <AboutMe />
-          <Skills />
-          <Project />
-        </div>
-      </div>
+      <Container />
     </>
   )
 }

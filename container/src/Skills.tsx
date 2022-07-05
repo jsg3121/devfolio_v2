@@ -2,98 +2,37 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import skills from 'styles/skills.module.scss'
 import { Progress, SIcon } from 'components'
+import useSWR from 'swr'
+import axios from 'axios'
 
 const Skills: React.FC = () => {
+  const { data } = useSWR<Array<SkillsProps>>('/api/skills', async () => {
+    return await axios
+      .request({
+        method: 'GET',
+        url: '/api/skills',
+      })
+      .then((res) => {
+        return res.data
+      })
+  })
+
   return (
     <section className={skills.skills} id="skills">
       <h1>Skills</h1>
       <div className={`${skills.skills__content} skill__content`}>
         <ul>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="html" />
-            </div>
-            <Progress capacity={90} grade={3} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="css" />
-            </div>
-            <Progress capacity={90} grade={3} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="javascript" />
-            </div>
-            <Progress capacity={80} grade={3} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="typescript" />
-            </div>
-            <Progress capacity={80} grade={3} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="node" />
-            </div>
-            <Progress capacity={80} grade={3} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="react" />
-            </div>
-            <Progress capacity={80} grade={3} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="vue" />
-            </div>
-            <Progress capacity={70} grade={2} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="redux" />
-            </div>
-            <Progress capacity={70} grade={2} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="prisma" />
-            </div>
-            <Progress capacity={60} grade={2} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="mysql" />
-            </div>
-            <Progress capacity={60} grade={2} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="mobx" />
-            </div>
-            <Progress capacity={50} grade={1} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="graphql" />
-            </div>
-            <Progress capacity={50} grade={1} />
-          </li>
-
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="storybook" />
-            </div>
-            <Progress capacity={50} grade={1} />
-          </li>
-          <li>
-            <div className={skills['skills__content-icon']}>
-              <SIcon skillPath="docker" />
-            </div>
-            <Progress capacity={50} grade={1} />
-          </li>
+          {data &&
+            data.map((item) => {
+              return (
+                <li key={item.name}>
+                  <div className={skills['skills__content-icon']}>
+                    <SIcon skillPath={item.path} />
+                  </div>
+                  <Progress capacity={item.capacity} grade={item.grade} />
+                </li>
+              )
+            })}
         </ul>
       </div>
     </section>
