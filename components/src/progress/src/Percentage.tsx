@@ -14,11 +14,10 @@ const Percentage: React.FC<PercentageProps> = (props) => {
 
   React.useEffect(() => {
     const container = document.querySelector('.container')
-    gsap.from(percentRef.current, {
-      textContent: 0,
+    gsap.to(percentRef.current, {
+      textContent: capacity,
       duration: 1,
       snap: { textContent: 1 },
-      stagger: 1,
       scrollTrigger: {
         trigger: document.querySelector('.skill__content'),
         start: () => window.innerHeight * 2,
@@ -26,12 +25,12 @@ const Percentage: React.FC<PercentageProps> = (props) => {
         scroller: container,
       },
     })
-  }, [])
+  }, [capacity])
 
   return (
     <div>
       <p className={components['progress__percentage-text']} ref={percentRef}>
-        {capacity}
+        0
       </p>
     </div>
   )

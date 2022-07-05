@@ -3,14 +3,9 @@ import isEqual from 'fast-deep-equal'
 import styled from 'styled-components'
 import { Capacity, Percentage } from './progress'
 
-interface ProgressBarProps {
-  capacity: number
-  grade: 1 | 2 | 3
-}
+interface ProgressBarProps extends Omit<SkillsProps, 'path' | 'name'> {}
 
-interface ProgressProps {
-  grade: 1 | 2 | 3
-}
+interface ProgressProps extends Pick<SkillsProps, 'grade'> {}
 
 const Progress = styled.div<ProgressProps>`
   height: 0.9rem;

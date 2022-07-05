@@ -88,8 +88,9 @@
   height: clamp(16rem, 33vw, 22rem);
   position: absolute;
   will-change: transform;
-  transform: translate(0, 100vh);
+  transform: translate(0, 60vh);
   right: 8rem;
+  opacity: 0;
 
   picture {
     figure {
@@ -115,7 +116,8 @@
   position: absolute;
   will-change: transform;
   left: 23rem;
-  transform: translate(0, 100vh);
+  transform: translate(0, 40vh);
+  opacity: 0;
 
   picture {
     figure {

@@ -1,19 +1,18 @@
 import isEqual from 'fast-deep-equal'
-import { gsap } from 'gsap'
+import { capacityMotion } from 'motions'
 import React from 'react'
 import styled from 'styled-components'
 
-interface CapacityProps {
-  capacity: number
-  grade: 1 | 2 | 3
-}
+interface CapacityProps extends Omit<SkillsProps, 'path' | 'name'> {}
 
 const CapacityContainer = styled.i<CapacityProps>`
-  width: 0;
+  width: 100%;
   height: 100%;
   display: block;
   border-radius: 0.2rem;
-  will-change: width;
+  will-change: transform;
+  transform-origin: left center;
+  transform: scale(0, 1);
   background-color: ${(props) => {
     switch (props.grade) {
       case 1:
@@ -25,22 +24,6 @@ const CapacityContainer = styled.i<CapacityProps>`
     }
   }};
 `
-const percentCount = (ref?: HTMLElement, capacity?: number) => {
-  if (ref) {
-    const container = document.querySelector('.container')
-
-    gsap.to(ref, {
-      width: `${capacity}%`,
-      duration: 1,
-      scrollTrigger: {
-        trigger: document.querySelector('.skill__content'),
-        start: () => window.innerHeight * 2,
-        end: () => window.innerHeight * 2,
-        scroller: container,
-      },
-    })
-  }
-}
 
 const Capacity: React.FC<CapacityProps> = (props) => {
   const { capacity, grade } = props
@@ -49,9 +32,9 @@ const Capacity: React.FC<CapacityProps> = (props) => {
 
   React.useEffect(() => {
     if (progressRef.current) {
-      percentCount(progressRef.current, capacity)
+      capacityMotion(progressRef.current, capacity)
     }
-    return () => percentCount()
+    return () => capacityMotion()
   }, [capacity])
 
   return (
