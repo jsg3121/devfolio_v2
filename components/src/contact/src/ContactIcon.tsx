@@ -3,20 +3,17 @@ import isEqual from 'fast-deep-equal'
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface HeaderIconProps {
-  image: string
-  link: string
-}
+interface ContactIconProps extends IconLinkProps {}
 
-const HeaderIcon: React.FC<HeaderIconProps> = (props) => {
-  const { image, link } = props
+const ContactIcon: React.FC<ContactIconProps> = (props) => {
+  const { img, link } = props
 
   return (
     <Link href={link}>
       <a target="_blank">
         <picture>
           <figure>
-            <Image src={image} alt="github" layout="fill" priority />
+            <Image src={img} alt="github" layout="fill" priority />
           </figure>
         </picture>
       </a>
@@ -24,4 +21,4 @@ const HeaderIcon: React.FC<HeaderIconProps> = (props) => {
   )
 }
 
-export default React.memo(HeaderIcon, isEqual)
+export default React.memo(ContactIcon, isEqual)

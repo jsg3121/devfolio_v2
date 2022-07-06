@@ -2,12 +2,12 @@ import React from 'react'
 import isEqual from 'fast-deep-equal'
 import { useRouter } from 'next/router'
 
-interface HeaderLinkProps {
+interface ContactLinkProps {
   href: string
   label: string
 }
 
-const HeaderLink: React.FC<HeaderLinkProps> = (props) => {
+const ContactLink: React.FC<ContactLinkProps> = (props) => {
   const { href, label } = props
 
   const router = useRouter()
@@ -27,4 +27,4 @@ const HeaderLink: React.FC<HeaderLinkProps> = (props) => {
   )
 }
 
-export default React.memo(HeaderLink, isEqual)
+export default React.memo(ContactLink, isEqual)

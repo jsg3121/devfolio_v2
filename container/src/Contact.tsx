@@ -1,12 +1,12 @@
 import axios from 'axios'
+import { ContactFile, ContactIcon } from 'components'
 import isEqual from 'fast-deep-equal'
-import Link from 'next/link'
 import React from 'react'
 import contact from 'styles/contact.module.scss'
 import useSWR from 'swr'
 
 const Contact: React.FC = () => {
-  const { data } = useSWR<Array<WhoAmIProps>>('/api/contact', async () => {
+  const { data } = useSWR<ContactProps>('/api/contact', async () => {
     return await axios
       .request({
         method: 'GET',
@@ -20,36 +20,25 @@ const Contact: React.FC = () => {
       <div className={contact['contact__content--contact']}>
         <h1>Contact</h1>
         <div className={contact['contact__more-info']}>
-          <ul>
-            <li>
-              <h1>Mail</h1>
-              <Link href="mailto:xodm95@gmail.com">
-                <a target="_blank">xodm95@gmail.com</a>
-              </Link>
-            </li>
-            <li>
-              <h1>git</h1>
-              <Link href="https://github.com/jsg3121">
-                <a target="_blank">https://github.com/jsg3121</a>
-              </Link>
-            </li>
-            <li>
-              <h1>velog</h1>
-              <Link href="https://velog.io/@jsg3121">
-                <a target="_blank">https://velog.io/@jsg3121</a>
-              </Link>
-            </li>
-            <li>
-              <h1>wakatime</h1>
-              <Link href="https://wakatime.com/@jsg3121">
-                <a target="_blank">https://wakatime.com/@jsg3121</a>
-              </Link>
-            </li>
-            <li>
-              <h2>
-                더 많은 정보는 좌측 아이콘으로 이동하여 확인하실 수 있어요!
-              </h2>
-            </li>
+          <ul className={contact['contact__icon-list']}>
+            {data &&
+              data.iconLink.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <ContactIcon img={item.img} link={item.link} />
+                  </li>
+                )
+              })}
+          </ul>
+          <ul className={contact['contact__icon-list']}>
+            {data &&
+              data.iconFile.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <ContactFile img={item.img} path={item.path} />
+                  </li>
+                )
+              })}
           </ul>
         </div>
       </div>

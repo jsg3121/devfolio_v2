@@ -27,10 +27,11 @@ const WhoAmIData: Array<WhoAmIProps> = [
   },
 ]
 
-export default function handler(
+const handler = (
   _: NextApiRequest,
   res: NextApiResponse<Array<WhoAmIProps>>
-) {
+) => {
   res.send(WhoAmIData)
   res.end()
 }
+export default handler

@@ -77,10 +77,12 @@ const projectData: Array<ProjectTypes> = [
   },
 ]
 
-export default function handler(
+const handler = (
   _: NextApiRequest,
   res: NextApiResponse<Array<ProjectTypes>>
-) {
+) => {
   res.send(projectData)
   res.end()
 }
+
+export default handler

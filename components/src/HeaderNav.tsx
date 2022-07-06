@@ -1,7 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import header from 'styles/header.module.scss'
-import { HeaderLink } from './header'
+import { HeaderLink } from './contact'
 
 interface HeaderNavProps {
   onClick: () => void

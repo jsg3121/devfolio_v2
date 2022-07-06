@@ -28,6 +28,20 @@ declare global {
     imozy: `/${string}.webp`
     description: string
   }
+
+  export interface IconLinkProps {
+    img: string
+    link: string
+  }
+  export interface IconFileProps {
+    img: string
+    path: `${string}.${'pdf' | 'ppt' | ''}`
+  }
+
+  export interface ContactProps {
+    iconLink: Array<IconLinkProps>
+    iconFile: Array<IconFileProps>
+  }
 }
 
 export {}
