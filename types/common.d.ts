@@ -22,6 +22,12 @@ declare global {
     capacity: number
     grade: number
   }
+
+  export interface WhoAmIProps {
+    name: string
+    imozy: `/${string}.webp`
+    description: string
+  }
 }
 
 export {}
