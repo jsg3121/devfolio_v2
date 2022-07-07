@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <div className={background.container}>
+      <div className={background.container}>
         <Canvas
           shadows
           dpr={[1, 2]}
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
             />
           </EffectComposer>
         </Canvas>
-      </div> */}
+      </div>
       <Container />
     </>
   )
