@@ -1,9 +1,9 @@
-import React from 'react'
-import isEqual from 'fast-deep-equal'
-import skills from 'styles/skills.module.scss'
-import { Progress, SIcon } from 'components'
-import useSWR from 'swr'
 import axios from 'axios'
+import { Progress, SIcon } from 'components'
+import isEqual from 'fast-deep-equal'
+import React from 'react'
+import skills from 'styles/skills.module.scss'
+import useSWR from 'swr'
 
 const Skills: React.FC = () => {
   const { data } = useSWR<Array<SkillsProps>>('/api/skills', async () => {

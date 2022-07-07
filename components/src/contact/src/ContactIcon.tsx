@@ -1,7 +1,7 @@
-import React from 'react'
 import isEqual from 'fast-deep-equal'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 interface ContactIconProps extends Omit<IconLinkProps, 'name'> {}
 

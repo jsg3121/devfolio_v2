@@ -1,7 +1,7 @@
-import React from 'react'
 import isEqual from 'fast-deep-equal'
-import introduce from 'styles/introduce.module.scss'
 import { gsap } from 'gsap'
+import React from 'react'
+import introduce from 'styles/introduce.module.scss'
 
 const Introduce: React.FC = () => {
   const typingRef = React.useRef<HTMLHeadingElement>(null)

@@ -1,7 +1,7 @@
-import React from 'react'
-import isEqual from 'fast-deep-equal'
-import { useFrame } from '@react-three/fiber'
 import { Instance, Instances } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import isEqual from 'fast-deep-equal'
+import React from 'react'
 import { MathUtils } from 'three'
 
 interface BubblesProps {}

@@ -1,8 +1,8 @@
 import { HeaderNav, HeaderSNB, Image } from 'components'
 import isEqual from 'fast-deep-equal'
+import { gsap } from 'gsap'
 import React from 'react'
 import header from 'styles/header.module.scss'
-import { gsap } from 'gsap'
 
 const navMotion = (ref: HTMLDivElement, isHide?: boolean) => {
   gsap

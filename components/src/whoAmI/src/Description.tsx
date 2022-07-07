@@ -1,5 +1,5 @@
-import React from 'react'
 import isEqual from 'fast-deep-equal'
+import React from 'react'
 import whoAmI from 'styles/whoAmI.module.scss'
 
 interface DescriptionProps extends Omit<WhoAmIProps, 'imozy'> {}
