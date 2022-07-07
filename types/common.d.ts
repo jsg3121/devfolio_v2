@@ -30,10 +30,12 @@ declare global {
   }
 
   export interface IconLinkProps {
+    name: string
     img: string
     link: string
   }
   export interface IconFileProps {
+    name: string
     img: string
     path: `${string}.${'pdf' | 'ppt' | ''}`
   }

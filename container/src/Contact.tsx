@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ContactFile, ContactIcon } from 'components'
+import { ContactList } from 'components'
 import isEqual from 'fast-deep-equal'
 import React from 'react'
 import contact from 'styles/contact.module.scss'
@@ -18,29 +18,8 @@ const Contact: React.FC = () => {
   return (
     <section className={contact.contact} id="contact">
       <div className={contact['contact__content--contact']}>
-        <h1>Contact</h1>
-        <div className={contact['contact__more-info']}>
-          <ul className={contact['contact__icon-list']}>
-            {data &&
-              data.iconLink.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <ContactIcon img={item.img} link={item.link} />
-                  </li>
-                )
-              })}
-          </ul>
-          <ul className={contact['contact__icon-list']}>
-            {data &&
-              data.iconFile.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <ContactFile img={item.img} path={item.path} />
-                  </li>
-                )
-              })}
-          </ul>
-        </div>
+        <h1>More</h1>
+        {data && <ContactList data={data} />}
       </div>
     </section>
   )

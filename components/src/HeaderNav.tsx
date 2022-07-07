@@ -1,7 +1,6 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import header from 'styles/header.module.scss'
-import { HeaderLink } from './contact'
 
 interface HeaderNavProps {
   onClick: () => void
@@ -16,7 +15,7 @@ const HeaderNav: React.FC<HeaderNavProps> = (props) => {
   return (
     <nav>
       <ul className={header['header__navigation']}>
-        <li onClick={handleClick}>
+        {/* <li onClick={handleClick}>
           <HeaderLink href="#aboutMe" label="About Me" />
         </li>
         <li onClick={handleClick}>
@@ -27,7 +26,7 @@ const HeaderNav: React.FC<HeaderNavProps> = (props) => {
         </li>
         <li onClick={handleClick}>
           <HeaderLink href="#contact" label="Contact" />
-        </li>
+        </li> */}
       </ul>
     </nav>
   )

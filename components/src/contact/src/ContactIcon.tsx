@@ -3,7 +3,7 @@ import isEqual from 'fast-deep-equal'
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface ContactIconProps extends IconLinkProps {}
+interface ContactIconProps extends Omit<IconLinkProps, 'name'> {}
 
 const ContactIcon: React.FC<ContactIconProps> = (props) => {
   const { img, link } = props

@@ -2,7 +2,7 @@ import isEqual from 'fast-deep-equal'
 import React from 'react'
 import Image from '../../common/src/Image'
 
-interface ContactFileProps extends IconFileProps {}
+interface ContactFileProps extends Omit<IconFileProps, 'name'> {}
 
 const ContactFile: React.FC<ContactFileProps> = (props) => {
   const { img, path } = props

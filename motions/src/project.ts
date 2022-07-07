@@ -98,7 +98,7 @@ export const articleMotion = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: title,
-        start: 'top top',
+        start: 'top+=100% top',
         end: '+=15%',
         scrub: true,
         scroller: container,
