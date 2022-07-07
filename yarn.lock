@@ -445,13 +445,12 @@
     zustand "^3.7.1"
 
 "@react-three/postprocessing@^2.3.2":
-  version "2.4.6"
-  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.4.6.tgz#1dfd6869ea064df36a7e4b770943c74a76a96377"
-  integrity sha512-LxCCtBamNT5uHN8Y1K5ec7ZqdmcIEoWUTWW0ujofX9kode5htk0E2zl8onSXMvRaDsOCMzP5EK3MycLXWgGFuA==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.3.3.tgz#002afec5ba9852f68be56f028e515b50bcf38aa4"
+  integrity sha512-XgS0TbMafw7oPqkR5fHD9pZ1f5f/qHePdmyOhHdaZ2uTz1XpbFqZAhc7JNYTBN7SiM+xDIZVvX7/202QM9I4zw==
   dependencies:
-    postprocessing "^6.28.1"
+    postprocessing "^6.26.4"
     react-merge-refs "^1.1.0"
-    screen-space-reflections "^1.0.8"
     three-stdlib "^2.8.11"
 
 "@rushstack/eslint-patch@^1.1.3":
@@ -572,6 +571,11 @@
   dependencies:
     "@typescript-eslint/types" "5.30.5"
     "@typescript-eslint/visitor-keys" "5.30.5"
+
+"@typescript-eslint/types@5.30.0":
+  version "5.30.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.30.0.tgz#db7d81d585a3da3801432a9c1d2fafbff125e110"
+  integrity sha512-vfqcBrsRNWw/LBXyncMF/KrUTYYzzygCSsVqlZ1qGu1QtGs6vMkt3US0VNSQ05grXi5Yadp3qv5XZdYLjpp8ag==
 
 "@typescript-eslint/types@5.30.5":
   version "5.30.5"
@@ -2998,7 +3002,7 @@ postcss@8.4.5:
     picocolors "^1.0.0"
     source-map-js "^1.0.1"
 
-postprocessing@^6.28.1:
+postprocessing@^6.26.4:
   version "6.28.1"
   resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.28.1.tgz#b201e6d9c9e1e2af4213a3b81af57ec599f5ed8d"
   integrity sha512-3KwA5k9IwdB0bpyJ/jK1KnXAk1BJYV1jnywGXJnQXg5trSNVRUq0Gkas2GDIpo+6ThCbwb20NmF6WQOaeyk1Og==
@@ -3355,11 +3359,6 @@ scheduler@^0.22.0:
   integrity sha512-6QAm1BgQI88NPYymgGQLCZgvep4FyePDWFpXVK+zNSUgHwlqpJy8VEh8Et0KxTACS4VWwMousBElAZOH9nkkoQ==
   dependencies:
     loose-envify "^1.1.0"
-
-screen-space-reflections@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/screen-space-reflections/-/screen-space-reflections-1.0.8.tgz#304de62086cdcfa92151a48d19a608539e548586"
-  integrity sha512-UBahDIY3TBds7RIkiGmBMQLZKjBYuAdatOBHEs8jpkSe414cJ66nKNPh/cBFL7ZekTorluNbmxdbJ1GEw/e8xQ==
 
 scss-tokenizer@^0.3.0:
   version "0.3.0"

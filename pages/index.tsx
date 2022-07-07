@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   return (
     <>
       <div className={background.container}>
-        {/* <Canvas
+        <Canvas
           shadows
           dpr={[1, 2]}
           gl={{ antialias: true }}
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
               color="blue"
             />
           </EffectComposer>
-        </Canvas> */}
+        </Canvas>
       </div>
       <Container />
     </>
