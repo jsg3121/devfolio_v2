@@ -22,6 +22,28 @@ declare global {
     capacity: number
     grade: number
   }
+
+  export interface WhoAmIProps {
+    name: string
+    imozy: `/${string}.webp`
+    description: string
+  }
+
+  export interface IconLinkProps {
+    name: string
+    img: string
+    link: string
+  }
+  export interface IconFileProps {
+    name: string
+    img: string
+    path: `${string}.${'pdf' | 'ppt' | ''}`
+  }
+
+  export interface ContactProps {
+    iconLink: Array<IconLinkProps>
+    iconFile: Array<IconFileProps>
+  }
 }
 
 export {}

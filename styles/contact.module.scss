@@ -1,137 +1,128 @@
 .contact {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
-  padding: 8rem 5rem;
+  padding: 5rem 3rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 
-  & > h1 {
-    width: 100%;
-    font-size: 3.5rem;
-    height: 5.5rem;
-    font-weight: 900;
-    left: 5rem;
-    top: 8rem;
-    position: sticky;
-    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
-    padding-bottom: 2rem;
-    z-index: 100;
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-
-  &::before {
-    content: '';
-    width: 100%;
-    height: 8rem;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    z-index: 1000;
-  }
-}
-.contact__content--interview {
-  width: calc(100% - 18rem);
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-  margin-bottom: 5rem;
-
-  & > h2 {
-    width: 100%;
-    font-size: 2rem;
-    font-weight: 500;
-    background-color: #ffffff;
-    position: sticky;
-    z-index: 100;
-    top: 12rem;
-  }
-
-  .contact__teller {
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    align-items: center;
-
-    .contact__profile-image {
-      width: 8rem;
-      height: 8rem;
-    }
-
-    .contact__teller-description {
-      width: calc(100% - 10rem);
-      height: 8rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      p {
-        width: 100%;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-      }
-
-      span {
-        font-size: 1rem;
-        width: 100%;
-        text-align: right;
-      }
-    }
+  @media screen and (max-width: 419px) {
+    padding: 3rem 1.6rem;
   }
 }
 
 .contact__content--contact {
-  width: calc(100% - 18rem);
-  height: 26rem;
+  width: 100%;
   position: relative;
 
-  & > h2 {
-    width: 100%;
-    font-size: 2rem;
-    font-weight: 500;
-    background-color: #ffffff;
-    position: sticky;
-    z-index: 100;
-    top: 12rem;
+  & > h1 {
+    font-size: 3.5rem;
+    height: 5.5rem;
+    font-weight: 900;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+    padding-bottom: 2rem;
   }
 
   .contact__more-info {
-    width: 100%;
+    width: calc(min(50rem, 100%));
     padding: 2rem;
+    margin: 0 auto;
 
-    ul {
+    @media screen and (max-width: 639px) {
+      height: calc(100% - 5.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .contact__icon-list {
+      width: 100%;
+      height: 13rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media screen and (max-width: 419px) {
+        height: 8rem;
+      }
+
       li {
-        height: 2rem;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        position: relative;
+        will-change: transform;
+        filter: drop-shadow(0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.3));
+        transform: scale(0);
 
-        h1 {
-          width: 8rem;
-          position: relative;
-          font-size: 1.5rem;
-          margin-right: 0.5rem;
+        @media screen and (min-width: 420px) and (max-width: 639px) {
+          width: 5rem;
+          height: 5rem;
+        }
 
-          &::after {
-            content: '\003A';
-            position: absolute;
-            height: 100%;
-            right: 0;
-            margin-right: 0.5rem;
+        @media screen and (max-width: 419px) {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        button {
+          width: 6rem;
+          height: 6rem;
+
+          @media screen and (min-width: 420px) and (max-width: 639px) {
+            width: 5rem;
+            height: 5rem;
+          }
+
+          @media screen and (max-width: 419px) {
+            width: 4rem;
+            height: 4rem;
           }
         }
 
-        p,
-        a,
-        h2 {
+        .icon {
+          width: 100%;
           height: 100%;
-          font-size: 1.5rem;
-          line-height: 2rem;
-          font-weight: normal;
+        }
+
+        .tooltip {
+          width: max-content;
+          padding: 0.5rem 2rem;
+          background-color: #333333;
+          border-radius: 1.5rem;
+          position: absolute;
+          top: -4rem;
+          left: 50%;
+          will-change: transform;
+          transform: translate(-50%, 0) scale(0);
+          transform-origin: bottom;
+          transition: all 0.2s;
+          z-index: 4;
+
+          &::before {
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            background-color: #333333;
+            position: absolute;
+            left: 50%;
+            bottom: -0.5rem;
+            transform: translate(-50%, 0) rotate(45deg);
+            z-index: -1;
+          }
+
+          p {
+            color: #ffffff;
+          }
+        }
+
+        &:hover {
+          .tooltip {
+            transform: translate(-50%, 0) scale(1) !important;
+          }
         }
       }
     }

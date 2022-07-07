@@ -6,9 +6,12 @@ import React from 'react'
 import Scrollbar from 'smooth-scrollbar'
 import background from 'styles/background.module.scss'
 import AboutMe from './AboutMe'
+import Contact from './Contact'
+import Footer from './Footer'
 import Introduce from './Introduce'
 import Project from './Project'
 import Skills from './Skills'
+import WhoAmI from './WhoAmI'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
@@ -49,6 +52,9 @@ const Container: React.FC = () => {
         <AboutMe />
         <Skills />
         <Project />
+        <WhoAmI />
+        <Contact />
+        <Footer />
       </div>
     </div>
   )

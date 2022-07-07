@@ -18,10 +18,12 @@ const skillList: Array<SkillsProps> = [
   { name: 'docker', path: 'docker', capacity: 50, grade: 1 },
 ]
 
-export default function handler(
+const handler = (
   _: NextApiRequest,
   res: NextApiResponse<Array<SkillsProps>>
-) {
+) => {
   res.send(skillList)
   res.end()
 }
+
+export default handler

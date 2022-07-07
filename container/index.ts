@@ -1,8 +1,1 @@
-export { default as Header } from './src/Header'
-export { default as AboutMe } from './src/AboutMe'
-export { default as Skills } from './src/Skills'
-export { default as Introduce } from './src/Introduce'
-export { default as Project } from './src/Project'
-export { default as Contact } from './src/Contact'
-export { default as Footer } from './src/Footer'
 export { default as Container } from './src/Container'
