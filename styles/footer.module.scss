@@ -11,31 +11,16 @@
     flex-wrap: wrap;
   }
 
-  .content__info {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    align-self: center;
-
-    a {
-      font-size: 0.7rem;
-      color: #ffffff;
-      text-decoration: underline;
-      text-underline-position: under;
-    }
-  }
-
   .content__copyright {
     width: 100%;
     text-align: center;
-    align-self: flex-end;
-    margin-bottom: 2rem;
+    align-self: center;
 
     p {
       color: #ffffff;
       font-size: 1rem;
       height: 1rem;
-      margin-top: 0.3rem;
+      margin-top: 0.8rem;
     }
   }
 }

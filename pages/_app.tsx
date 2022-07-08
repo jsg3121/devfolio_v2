@@ -50,7 +50,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyle />
       <Root id="root">
-        {/* <Header /> */}
         <Component {...pageProps} />
       </Root>
     </>
