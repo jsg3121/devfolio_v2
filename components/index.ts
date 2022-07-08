@@ -5,7 +5,6 @@ export { default as HeaderSNB } from './src/HeaderSNB'
 
 export * from './src/project'
 export * from './src/contact'
-export * from './src/background'
 export * from './src/common'
 export * from './src/aboutMe'
 export * from './src/whoAmI'
