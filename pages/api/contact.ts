@@ -5,7 +5,7 @@ const contactData: ContactProps = {
     {
       name: 'Github 구경가기',
       img: '/github.svg',
-      link: 'https://github.com/jsg3121/devfolio_v2',
+      link: 'https://github.com/jsg3121',
     },
     {
       name: '블로그 구경가기',
