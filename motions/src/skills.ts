@@ -17,7 +17,7 @@ export const capacityMotion = (ref?: HTMLElement, capacity?: number) => {
   }
 }
 
-export const percentMotion = (data?: Array<SkillsProps>) => {
+export const percentMotion = (data?: Array<CareerProps>) => {
   const container = document.querySelector('.container')
   const texts = gsap.utils.toArray<Element>('.progress__percentage-text')
 

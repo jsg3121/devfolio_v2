@@ -16,11 +16,29 @@ declare global {
     thumbnail: string
   }
 
-  export interface SkillsProps {
+  interface Skills {
     name: string
     path: string
     capacity: number
     grade: number
+  }
+
+  interface CareerDetail {
+    name: string
+    date: string
+    description: Array<string>
+  }
+
+  interface Career {
+    company: string
+    startDate: string
+    endDate: string
+    career: Array<CareerDetail>
+  }
+
+  export interface CareerProps {
+    skills: Array<Skills>
+    career: Array<Career>
   }
 
   export interface WhoAmIProps {
