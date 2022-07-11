@@ -27,7 +27,7 @@ const Progress = styled.div<ProgressProps>`
   box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.3);
 
   @media screen and (max-width: 419px) {
-    width: calc(100% - 6.6rem);
+    width: calc(100% - 7rem);
     margin: 0 0.7rem;
   }
 `
