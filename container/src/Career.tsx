@@ -18,7 +18,7 @@ const Career: React.FC = () => {
   })
 
   return (
-    <section className={career.skills} id="skills">
+    <section className={career.career} id="skills">
       <h1>Career</h1>
       <div className={career.career__content}>
         {data &&
