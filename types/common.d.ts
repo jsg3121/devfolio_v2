@@ -1,5 +1,5 @@
 declare global {
-  export interface ProjectDetailTypes {
+  interface ProjectDetailTypes {
     name: string
     git: string
     detailDescription: Array<string>
@@ -8,7 +8,7 @@ declare global {
     detailThumbnail: Array<string>
     members: Array<string>
   }
-  export interface ProjectTypes {
+  interface ProjectTypes {
     index: number
     name: string
     mainDescription: string
@@ -16,31 +16,49 @@ declare global {
     thumbnail: string
   }
 
-  export interface SkillsProps {
+  interface Skills {
     name: string
     path: string
     capacity: number
     grade: number
   }
 
-  export interface WhoAmIProps {
+  interface CareerDetail {
+    name: string
+    date: string
+    description: Array<string>
+  }
+
+  interface Career {
+    company: string
+    startDate: string
+    endDate: string
+    career: Array<CareerDetail>
+  }
+
+  interface CareerProps {
+    skills: Array<Skills>
+    career: Array<Career>
+  }
+
+  interface WhoAmIProps {
     name: string
     imozy: `/${string}.webp`
     description: string
   }
 
-  export interface IconLinkProps {
+  interface IconLinkProps {
     name: string
     img: string
     link: string
   }
-  export interface IconFileProps {
+  interface IconFileProps {
     name: string
     img: string
     path: `${string}.${'pdf' | 'ppt' | ''}`
   }
 
-  export interface ContactProps {
+  interface ContactProps {
     iconLink: Array<IconLinkProps>
     iconFile: Array<IconFileProps>
   }

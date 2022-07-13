@@ -3,11 +3,7 @@ import isEqual from 'fast-deep-equal'
 import styled from 'styled-components'
 import { Capacity, Percentage } from './progress'
 
-interface ProgressBarProps extends Omit<SkillsProps, 'path' | 'name'> {}
-
-interface ProgressProps extends Pick<SkillsProps, 'grade'> {}
-
-const Progress = styled.div<ProgressProps>`
+const Progress = styled.div<Pick<Skills, 'grade'>>`
   height: 0.9rem;
   width: calc(100% - 10rem);
   margin: 0 1rem;
@@ -27,12 +23,12 @@ const Progress = styled.div<ProgressProps>`
   box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.3);
 
   @media screen and (max-width: 419px) {
-    width: calc(100% - 6.6rem);
+    width: calc(100% - 7rem);
     margin: 0 0.7rem;
   }
 `
 
-const ProgressBar: React.FC<ProgressBarProps> = (props) => {
+const ProgressBar: React.FC<Omit<Skills, 'path' | 'name'>> = (props) => {
   const { capacity, grade } = props
 
   return (

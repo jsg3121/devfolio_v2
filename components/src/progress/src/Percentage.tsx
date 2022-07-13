@@ -20,8 +20,7 @@ const Percentage: React.FC<PercentageProps> = (props) => {
       snap: { textContent: 1 },
       scrollTrigger: {
         trigger: document.querySelector('.skill__content'),
-        start: () => window.innerHeight * 2,
-        end: () => window.innerHeight * 2,
+        start: 'top-=100% top',
         scroller: container,
       },
     })

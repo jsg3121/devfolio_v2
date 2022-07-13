@@ -10,7 +10,7 @@ import Contact from './Contact'
 import Footer from './Footer'
 import Introduce from './Introduce'
 import Project from './Project'
-import Skills from './Skills'
+import Career from './Career'
 import WhoAmI from './WhoAmI'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
@@ -50,7 +50,7 @@ const Container: React.FC = () => {
       <div className="container">
         <Introduce />
         <AboutMe />
-        <Skills />
+        <Career />
         <Project />
         <WhoAmI />
         <Contact />

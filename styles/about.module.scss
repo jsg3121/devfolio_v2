@@ -11,7 +11,6 @@
   }
 
   @media screen and (max-width: 419px) {
-    min-height: calc(100vh - 5rem);
     padding: 0 1.6rem 2rem;
   }
 
@@ -58,9 +57,8 @@
   }
 
   @media screen and (max-width: 479px) {
-    width: 100%;
-    align-self: flex-end;
     margin: 0;
+    height: 25rem;
   }
 }
 
@@ -78,8 +76,19 @@
   }
 
   @media screen and (max-width: 479px) {
-    width: 100%;
     margin-right: 0;
+  }
+
+  @media screen and (max-height: 840px) {
+    margin-right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    padding: 1rem;
+
+    span {
+      color: #ffffff;
+      mix-blend-mode: difference;
+    }
   }
 }
 
@@ -88,8 +97,9 @@
   height: clamp(16rem, 33vw, 22rem);
   position: absolute;
   will-change: transform;
-  transform: translate(0, 60vh);
+  top: 18rem;
   right: 8rem;
+  transform: translate(0, 100%);
   opacity: 0;
 
   picture {
@@ -105,8 +115,8 @@
   }
 
   @media screen and (max-width: 479px) {
-    right: unset;
-    left: 1.6rem;
+    top: calc(clamp(16rem, 30vw, 20rem) + 12rem);
+    right: 1.6rem;
   }
 }
 
@@ -115,8 +125,9 @@
   height: clamp(16rem, 30vw, 20rem);
   position: absolute;
   will-change: transform;
+  top: 9rem;
   left: 23rem;
-  transform: translate(0, 40vh);
+  transform: translate(0, 100%);
   opacity: 0;
 
   picture {
@@ -132,8 +143,7 @@
   }
 
   @media screen and (max-width: 479px) {
-    left: unset;
-    right: 1.6rem;
-    top: 40vh;
+    left: 1.6rem;
+    top: 9rem;
   }
 }

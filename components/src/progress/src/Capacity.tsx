@@ -3,9 +3,7 @@ import { capacityMotion } from 'motions'
 import React from 'react'
 import styled from 'styled-components'
 
-interface CapacityProps extends Omit<SkillsProps, 'path' | 'name'> {}
-
-const CapacityContainer = styled.i<CapacityProps>`
+const CapacityContainer = styled.i<Omit<Skills, 'path' | 'name'>>`
   width: 100%;
   height: 100%;
   display: block;
@@ -25,7 +23,7 @@ const CapacityContainer = styled.i<CapacityProps>`
   }};
 `
 
-const Capacity: React.FC<CapacityProps> = (props) => {
+const Capacity: React.FC<Omit<Skills, 'path' | 'name'>> = (props) => {
   const { capacity, grade } = props
 
   const progressRef = React.useRef<HTMLElement>(null)
