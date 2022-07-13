@@ -80,23 +80,21 @@ const projectData: Array<ProjectTypes> = [
   },
   {
     index: 'This',
-    name: 'Project Culture',
-    mainDescription: `대학교 재학중 팀 프로젝트로 진행했던 문화공연 정보 공유 서비스를 vue를 이용하여 새롭게 만들었습니다.
-    vue 프레임워크의 기본적인 라이프 사이클을 이해하며 json 데이터를 이용한 api 비동기 호출과
-    사용자가 시각적으로 느낄 수 있는 슬라이드, 무한 스크롤등의 기능을 직접 구현하였습니다.`,
+    name: 'Devfolio_v2',
+    mainDescription: `새롭게 사용하게 된 React 라이브러리를 이용한 typescript를 이용한 Next.js프레임워크로 
+                      이전 사이트보다 개선되고 웹 페이지를 제작했으며 SEO를 도입해 브라우저에서 검색시 검색 결과에 더 잘보이도록 하였습니다.`,
     detail: {
-      name: 'Project Culture',
-      date: '2020. 08 ~ 2020. 10',
-      git: 'https://github.com/jsg3121/CultureProject.git',
-      skills: ['vue', 'javascript', 'scss'],
+      name: 'Devfolio_v2',
+      date: '2022. 06 ~ 2022. 8',
+      git: 'https://github.com/jsg3121/devfolio_v2',
+      skills: ['nextjs', 'typescript', 'scss'],
       detailDescription: [
-        'vue 프레임워크를 이용한 웹페이지 개발했습니다.',
-        'vuex를 이용한 상태관리로 사용자가 검색한 문화행사 리스트 구현하였습니다.',
-        '스크롤 이벤트를 통한 지속적인 데이터 갱신으로 무한스크롤 구현하였습니다.',
-        '카테고리 별 문화행사를 찾아 볼 수 있도록 검색기능 구현하였습니다.',
-        '자주 보고 많이 사용하는 슬라이드 기능을 직접 구현하여 해당 기능의 로직을 이해했습니다.',
+        'Next.js를 이용한 SSR을 이용한 SEO작업을 진행했습니다.',
+        'gsap라이브러리를 이용하여 최적화된 스크롤에 따라 발생하는 모션 효과를 구현했습니다.',
+        '반응형 작업으로 PC뿐만 아니라 태블릿, 모바일에서도 확인 할 수 있도록 하였습니다.',
+        '웹 접근성에 맞는 시멘틱 태그의 사용과 브라우저의 작동원리를 고려하여 최적화된 페이지를 제작했습니다.',
       ],
-      members: ['개발 : 장선규', '디자인 : 김혜인'],
+      members: ['개발 : 장선규'],
       detailThumbnail: [
         '/culture_detail_100.webp',
         '/culture_detail_200.webp',
