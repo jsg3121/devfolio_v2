@@ -24,7 +24,6 @@ const Project: React.FC = () => {
           data.map((list, index) => {
             return <ProjectArticle data={list} key={index} />
           })}
-        {data && <ProjectArticle data={data[0]} />}
       </section>
     </>
   )

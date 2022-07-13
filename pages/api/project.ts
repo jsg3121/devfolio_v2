@@ -22,12 +22,13 @@ const projectData: Array<ProjectTypes> = [
       ],
       members: ['개발 : 장선규', '디자인 : 김혜인'],
       detailThumbnail: [
+        '/culture.webp',
         '/culture_detail_100.webp',
         '/culture_detail_200.webp',
         '/culture_detail_300.webp',
       ],
     },
-    thumbnail: '/culture.webp',
+    thumbnail: '/culture_thumb.webp',
   },
   {
     index: 2,
@@ -47,12 +48,14 @@ const projectData: Array<ProjectTypes> = [
         '모바일, 태블릿 등에서도 확인 할 수 있도록 반응형으로 구현하며 javascript뿐만 아니라 css 스타일 적용에 대한 부분을 이해했습니다.',
       ],
       detailThumbnail: [
-        '/devfolio_v1_detail_100.webp',
+        '/devfolio_v1.webp',
         '/devfolio_v1_detail_200.webp',
+        '/devfolio_v1_detail_300.webp',
+        '/devfolio_v1_detail_400.webp',
         '/devfolio_v1_detail_500.webp',
       ],
     },
-    thumbnail: '/devfolio_v1.webp',
+    thumbnail: '/devfolio_v1_detail_100.webp',
   },
   {
     index: 3,
@@ -71,9 +74,36 @@ const projectData: Array<ProjectTypes> = [
         '모바일, 데스크탑 화면에 맞도록 반응형으로 페이지를 구현하였습니다.',
         '위치 정보를 이용하여 데이터베이스 내 좌표값을 계산해 현재 사용자가 접속한 위치를 표시할 수 있도록 구현했습니다.',
       ],
-      detailThumbnail: ['/weather_detail_100.webp'],
+      detailThumbnail: ['/weather.webp'],
     },
-    thumbnail: '/weather.webp',
+    thumbnail: '/weather_detail_100.webp',
+  },
+  {
+    index: 'This',
+    name: 'Project Culture',
+    mainDescription: `대학교 재학중 팀 프로젝트로 진행했던 문화공연 정보 공유 서비스를 vue를 이용하여 새롭게 만들었습니다.
+    vue 프레임워크의 기본적인 라이프 사이클을 이해하며 json 데이터를 이용한 api 비동기 호출과
+    사용자가 시각적으로 느낄 수 있는 슬라이드, 무한 스크롤등의 기능을 직접 구현하였습니다.`,
+    detail: {
+      name: 'Project Culture',
+      date: '2020. 08 ~ 2020. 10',
+      git: 'https://github.com/jsg3121/CultureProject.git',
+      skills: ['vue', 'javascript', 'scss'],
+      detailDescription: [
+        'vue 프레임워크를 이용한 웹페이지 개발했습니다.',
+        'vuex를 이용한 상태관리로 사용자가 검색한 문화행사 리스트 구현하였습니다.',
+        '스크롤 이벤트를 통한 지속적인 데이터 갱신으로 무한스크롤 구현하였습니다.',
+        '카테고리 별 문화행사를 찾아 볼 수 있도록 검색기능 구현하였습니다.',
+        '자주 보고 많이 사용하는 슬라이드 기능을 직접 구현하여 해당 기능의 로직을 이해했습니다.',
+      ],
+      members: ['개발 : 장선규', '디자인 : 김혜인'],
+      detailThumbnail: [
+        '/culture_detail_100.webp',
+        '/culture_detail_200.webp',
+        '/culture_detail_300.webp',
+      ],
+    },
+    thumbnail: '/culture.webp',
   },
 ]
 
