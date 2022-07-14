@@ -96,12 +96,16 @@ const projectData: Array<ProjectTypes> = [
       ],
       members: ['개발 : 장선규'],
       detailThumbnail: [
-        '/culture_detail_100.webp',
-        '/culture_detail_200.webp',
-        '/culture_detail_300.webp',
+        '/dev_v2_000.webp',
+        '/dev_v2_thumb.webp',
+        '/dev_v2_200.webp',
+        '/dev_v2_300.webp',
+        '/dev_v2_400.webp',
+        '/dev_v2_500.webp',
+        '/dev_v2_600.webp',
       ],
     },
-    thumbnail: '/culture.webp',
+    thumbnail: '/dev_v2_thumb.webp',
   },
 ]
 

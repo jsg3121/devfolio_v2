@@ -131,11 +131,12 @@
   margin: 5rem auto 3rem;
 
   .project__list--images-item {
+    padding: 1rem;
     height: calc(min(100vw, 40rem));
   }
 
   @media screen and (max-width: 419px) {
-    width: 100%;
+    width: 90%;
 
     picture {
       width: 30%;
