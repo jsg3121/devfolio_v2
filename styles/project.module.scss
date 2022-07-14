@@ -186,8 +186,7 @@
         align-items: center;
         margin-bottom: 0.7rem;
 
-        span,
-        a {
+        span {
           min-width: 8rem;
           font-size: 1rem;
           font-weight: 300;
@@ -221,6 +220,50 @@
 
         @media screen and (max-width: 419px) {
           display: none;
+        }
+      }
+
+      .detail__info--link {
+        width: 15rem;
+        background-color: #333333;
+        border-radius: 1.5rem;
+        text-align: center;
+        box-shadow: 3px 2px 3px -1px #888888;
+        will-change: transform;
+        transform-origin: bottom center;
+        transition: transform 0.2s;
+        margin-top: 1rem;
+
+        a {
+          display: block;
+          color: #ffffff;
+          font-weight: 500;
+          line-height: 2rem;
+          position: relative;
+          padding-left: 1rem;
+
+          &::before {
+            content: '';
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            left: 1.75rem;
+            top: 50%;
+            transform: translate(0, -50%);
+            background: url('/github_link_icon.svg') center/contain no-repeat;
+          }
+
+          &:visited {
+            color: #ffffff;
+          }
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &:active {
+          transform: scale(0.95);
         }
       }
     }
