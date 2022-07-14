@@ -64,10 +64,9 @@ const ProjectDetailText: React.FC<ProjectDetailTextProps> = (props) => {
               </div>
             </li>
             <li>
-              <p>GitHub</p>
-              <div>
+              <div className={project['detail__info--link']}>
                 <Link href={git}>
-                  <a target="_blank">바로가기</a>
+                  <a target="_blank">저장소 바로가기</a>
                 </Link>
               </div>
             </li>

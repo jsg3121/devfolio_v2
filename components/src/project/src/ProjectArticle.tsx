@@ -16,7 +16,7 @@ const ArticleContent = styled.div<ArticleProps>`
   background: ${(props) => {
       return `url(${props.background})`
     }}
-    center/contain no-repeat;
+    center/cover no-repeat;
 `
 
 const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
@@ -47,13 +47,17 @@ const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
         <div
           className={`${project['project__title--sub']} project__title--sub`}
         >
-          {`Project .0${data.index}`.split('').map((word, index) => {
-            return word === ' ' ? (
-              <h1 key={index}>&nbsp;</h1>
-            ) : (
-              <h1 key={index}>{word}</h1>
-            )
-          })}
+          {`Project .${
+            typeof data.index === 'number' ? '0' + data.index : data.index
+          }`
+            .split('')
+            .map((word, index) => {
+              return word === ' ' ? (
+                <h1 key={index}>&nbsp;</h1>
+              ) : (
+                <h1 key={index}>{word}</h1>
+              )
+            })}
         </div>
       </div>
       <div className={`${project.project__list} project__item`}>

@@ -1,9 +1,8 @@
 import { Image } from 'components'
 import isEqual from 'fast-deep-equal'
+import { aboutMeMotions } from 'motions'
 import React from 'react'
 import aboutMe from 'styles/about.module.scss'
-import { gsap } from 'gsap'
-import { aboutMeMotions } from 'motions'
 
 interface ProfileProps extends Pick<HTMLDivElement, 'className'> {
   src: string

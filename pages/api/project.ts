@@ -22,12 +22,13 @@ const projectData: Array<ProjectTypes> = [
       ],
       members: ['개발 : 장선규', '디자인 : 김혜인'],
       detailThumbnail: [
+        '/culture.webp',
         '/culture_detail_100.webp',
         '/culture_detail_200.webp',
         '/culture_detail_300.webp',
       ],
     },
-    thumbnail: '/culture.webp',
+    thumbnail: '/culture_thumb.webp',
   },
   {
     index: 2,
@@ -47,12 +48,14 @@ const projectData: Array<ProjectTypes> = [
         '모바일, 태블릿 등에서도 확인 할 수 있도록 반응형으로 구현하며 javascript뿐만 아니라 css 스타일 적용에 대한 부분을 이해했습니다.',
       ],
       detailThumbnail: [
-        '/devfolio_v1_detail_100.webp',
+        '/devfolio_v1.webp',
         '/devfolio_v1_detail_200.webp',
+        '/devfolio_v1_detail_300.webp',
+        '/devfolio_v1_detail_400.webp',
         '/devfolio_v1_detail_500.webp',
       ],
     },
-    thumbnail: '/devfolio_v1.webp',
+    thumbnail: '/devfolio_v1_detail_100.webp',
   },
   {
     index: 3,
@@ -71,9 +74,38 @@ const projectData: Array<ProjectTypes> = [
         '모바일, 데스크탑 화면에 맞도록 반응형으로 페이지를 구현하였습니다.',
         '위치 정보를 이용하여 데이터베이스 내 좌표값을 계산해 현재 사용자가 접속한 위치를 표시할 수 있도록 구현했습니다.',
       ],
-      detailThumbnail: ['/weather_detail_100.webp'],
+      detailThumbnail: ['/weather.webp'],
     },
-    thumbnail: '/weather.webp',
+    thumbnail: '/weather_detail_100.webp',
+  },
+  {
+    index: 'This',
+    name: 'Devfolio_v2',
+    mainDescription: `새롭게 사용하게 된 React 라이브러리를 이용한 typescript를 이용한 Next.js프레임워크로 
+                      이전 사이트보다 개선되고 웹 페이지를 제작했으며 SEO를 도입해 브라우저에서 검색시 검색 결과에 더 잘보이도록 하였습니다.`,
+    detail: {
+      name: 'Devfolio_v2',
+      date: '2022. 06 ~ 2022. 8',
+      git: 'https://github.com/jsg3121/devfolio_v2',
+      skills: ['nextjs', 'typescript', 'scss'],
+      detailDescription: [
+        'Next.js를 이용한 SSR을 이용한 SEO작업을 진행했습니다.',
+        'gsap라이브러리를 이용하여 최적화된 스크롤에 따라 발생하는 모션 효과를 구현했습니다.',
+        '반응형 작업으로 PC뿐만 아니라 태블릿, 모바일에서도 확인 할 수 있도록 하였습니다.',
+        '웹 접근성에 맞는 시멘틱 태그의 사용과 브라우저의 작동원리를 고려하여 최적화된 페이지를 제작했습니다.',
+      ],
+      members: ['개발 : 장선규'],
+      detailThumbnail: [
+        '/dev_v2_000.webp',
+        '/dev_v2_thumb.webp',
+        '/dev_v2_200.webp',
+        '/dev_v2_300.webp',
+        '/dev_v2_400.webp',
+        '/dev_v2_500.webp',
+        '/dev_v2_600.webp',
+      ],
+    },
+    thumbnail: '/dev_v2_thumb.webp',
   },
 ]
 

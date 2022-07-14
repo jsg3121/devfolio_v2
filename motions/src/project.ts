@@ -83,7 +83,7 @@ export const articleMotion = () => {
     gsap.to(item, {
       scrollTrigger: {
         trigger: item,
-        start: 'top top+=10%',
+        start: 'top top+=5%',
         end: '+=30%',
         scrub: true,
         pin: true,
@@ -93,25 +93,27 @@ export const articleMotion = () => {
     })
   })
 
-  titles.forEach((title) => {
-    gsap.to(title, {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: title,
-        start: 'top+=100% top',
-        end: '+=15%',
-        scrub: true,
-        scroller: container,
-      },
-    })
-  })
+  // titles.forEach((title) => {
+  //   gsap.to(title, {
+  //     opacity: 0,
+  //     y: '-100%',
+  //     scrollTrigger: {
+  //       trigger: title,
+  //       start: 'top+=230% top',
+  //       end: '+=15%',
+  //       scrub: true,
+  //       scroller: container,
+  //     },
+  //   })
+  // })
 
   descriptions.forEach((description) => {
     gsap.to(description, {
       opacity: 0,
+      y: '-50%',
       scrollTrigger: {
         trigger: description,
-        start: 'top top+=30%',
+        start: 'top top+=15%',
         end: '+=15%',
         scrub: true,
         scroller: container,

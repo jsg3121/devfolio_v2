@@ -9,7 +9,7 @@ declare global {
     members: Array<string>
   }
   interface ProjectTypes {
-    index: number
+    index: number | string
     name: string
     mainDescription: string
     detail: ProjectDetailTypes

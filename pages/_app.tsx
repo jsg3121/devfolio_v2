@@ -3,6 +3,8 @@ import Head from 'next/head'
 import React from 'react'
 import styled from 'styled-components'
 import { GlobalStyle } from '../styles/Global'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const Root = styled.main`
   width: 100%;
