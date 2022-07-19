@@ -16,7 +16,7 @@ export const contactMotion = () => {
       delay: index * 0.15,
       scrollTrigger: {
         trigger: contact,
-        start: 'top top',
+        start: 'top center-=20%',
         end: 'top top',
         scroller: container,
       },
@@ -27,8 +27,8 @@ export const contactMotion = () => {
     opacity: 0,
     scrollTrigger: {
       trigger: contact,
-      start: 'top-=10% top',
-      end: 'top top',
+      start: 'top-=10% center',
+      end: 'top center',
       scroller: container,
       scrub: true,
     },

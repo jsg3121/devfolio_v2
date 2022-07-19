@@ -1,5 +1,4 @@
 import isEqual from 'fast-deep-equal'
-import { gsap } from 'gsap'
 import React from 'react'
 import component from 'styles/components.module.scss'
 import { Image } from './common'
