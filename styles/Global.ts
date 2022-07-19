@@ -72,6 +72,11 @@ export const GlobalStyle = createGlobalStyle`
     h1,h2,h3,h4,h5,h6,p,span,textarea {
         color: #333333;
     }
+     @media screen and (min-width: 1281px) {
+        html, body {
+            font-size : calc(max(18px,1vw));
+        }
+    }
 
     @media screen and (min-width: 960px) and (max-width: 1280px) {
         html, body {

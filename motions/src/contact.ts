@@ -1,5 +1,4 @@
 import { gsap } from 'gsap'
-import component from 'styles/components.module.scss'
 
 export const contactMotion = () => {
   const container = document.querySelector('.container')
@@ -16,7 +15,7 @@ export const contactMotion = () => {
       delay: index * 0.15,
       scrollTrigger: {
         trigger: contact,
-        start: 'top center-=20%',
+        start: 'top center',
         end: 'top top',
         scroller: container,
       },
