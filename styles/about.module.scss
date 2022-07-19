@@ -109,6 +109,8 @@
   }
 
   @media screen and (min-width: 480px) and (max-width: 959px) {
+    top: calc(clamp(16rem, 30vw, 20rem) + 8rem);
+    right: 5rem;
     width: 18rem;
     height: 18rem;
     flex-shrink: 0;
@@ -140,6 +142,8 @@
     width: 18rem;
     height: 18rem;
     flex-shrink: 0;
+    left: 5rem;
+    top: 12rem;
   }
 
   @media screen and (max-width: 479px) {

@@ -1,3 +1,4 @@
+import { ScrollIcon } from 'components'
 import { Container, Particles } from 'container'
 import type { NextPage } from 'next'
 import React from 'react'
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <Particles />
       </div>
       <Container />
+      <ScrollIcon />
     </>
   )
 }

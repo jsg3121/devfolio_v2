@@ -25,6 +25,8 @@ const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
   React.useEffect(() => {
     projectMotion()
     articleMotion()
+
+    return () => (projectMotion(), articleMotion())
   }, [])
 
   return (

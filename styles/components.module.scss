@@ -1,3 +1,24 @@
+@keyframes scroll {
+  0% {
+    transform: translate(-50%, 0.5rem);
+  }
+  50% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0.5rem);
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .progress__percentage-text {
   font-size: 1rem;
   font-weight: 300;
@@ -8,5 +29,30 @@
     position: absolute;
     right: -1rem;
     font-size: 1rem;
+  }
+}
+
+.scroll_container {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: scroll ease-out 1s both infinite;
+
+  & > div {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem auto 0;
+  }
+
+  & > p {
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }

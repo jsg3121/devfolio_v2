@@ -10,11 +10,6 @@ const Root = styled.main`
   width: 100%;
 `
 function MyApp({ Component, pageProps }: AppProps) {
-  React.useEffect(() => {
-    const vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--MOBILE-vh', `${vh}px`)
-  }, [])
-
   return (
     <>
       <Head>

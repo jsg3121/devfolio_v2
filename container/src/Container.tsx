@@ -6,11 +6,11 @@ import React from 'react'
 import Scrollbar from 'smooth-scrollbar'
 import background from 'styles/background.module.scss'
 import AboutMe from './AboutMe'
+import Career from './Career'
 import Contact from './Contact'
 import Footer from './Footer'
 import Introduce from './Introduce'
 import Project from './Project'
-import Career from './Career'
 import WhoAmI from './WhoAmI'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger)
@@ -21,7 +21,8 @@ const Container: React.FC = () => {
     const content = document.querySelector('.content') as any
 
     const scrollbar = Scrollbar.init(content, {
-      damping: 0.05,
+      damping: 0.1,
+      thumbMinSize: 1,
     })
     scrollbar.track.yAxis.element.remove()
 
