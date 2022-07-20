@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 export const projectMotion = () => {
   const container = document.querySelector('.container')
   const contents = gsap.utils.toArray<Element>('.project__content')
-  const backgrounds = gsap.utils.toArray<Element>('.project__title--main')
+  const backgrounds = gsap.utils.toArray<Element>('.project__title--background')
   const articles = gsap.utils.toArray<Element>('#project article')
 
   contents.forEach((content, index) => {
@@ -48,7 +48,7 @@ export const projectMotion = () => {
     )
 
     const names = gsap.utils.toArray<Element>(
-      `.${article.getAttribute('class')} .project__title--main div p`
+      `.${article.getAttribute('class')} .project__title--main p`
     )
 
     titles.forEach((title, index) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import isEqual from 'fast-deep-equal'
 import styled from 'styled-components'
-import { Capacity, Percentage } from './progress'
+import { Capacity, Percentage } from '../../progress'
 
 const Progress = styled.div<Pick<Skills, 'grade'>>`
   height: 0.9rem;

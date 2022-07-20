@@ -1,6 +1,6 @@
 import isEqual from 'fast-deep-equal'
 import React from 'react'
-import Image from './common/src/Image'
+import Image from '../../common/src/Image'
 
 interface SkillIconProps {
   skillPath: string

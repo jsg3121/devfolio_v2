@@ -17,6 +17,13 @@ const ArticleContent = styled.div<ArticleProps>`
       return `url(${props.background})`
     }}
     center/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  filter: blur(0.3rem);
+  transform: scale(1.02);
 `
 
 const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
@@ -33,19 +40,20 @@ const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
     <article className={data.name.trim().replace(' ', '')}>
       <div className={`${project.project__content} project__content`}>
         <ArticleContent
-          className={`${project['project__title--main']} project__title--main`}
           background={data.thumbnail}
+          className="project__title--background"
+        />
+        <div
+          className={`${project['project__title--main']} project__title--main`}
         >
-          <div>
-            {data.name.split('').map((word, index) => {
-              return word === ' ' ? (
-                <p key={index}>&nbsp;</p>
-              ) : (
-                <p key={index}>{word}</p>
-              )
-            })}
-          </div>
-        </ArticleContent>
+          {data.name.split('').map((word, index) => {
+            return word === ' ' ? (
+              <p key={index}>&nbsp;</p>
+            ) : (
+              <p key={index}>{word}</p>
+            )
+          })}
+        </div>
         <div
           className={`${project['project__title--sub']} project__title--sub`}
         >
