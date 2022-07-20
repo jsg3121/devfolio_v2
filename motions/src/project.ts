@@ -91,7 +91,7 @@ export const articleMotion = () => {
       scrollTrigger: {
         trigger: item,
         start: 'top top',
-        end: '+=35%',
+        end: 'bottom',
         scrub: true,
         pin: true,
         pinSpacing: false,
