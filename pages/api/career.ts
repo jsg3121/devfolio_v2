@@ -14,7 +14,6 @@ const skillList: CareerProps['skills'] = [
   { name: 'nextjs', path: 'nextjs', capacity: 60, grade: 2 },
   { name: 'mobx', path: 'mobx', capacity: 50, grade: 1 },
   { name: 'graphql', path: 'graphql', capacity: 50, grade: 1 },
-  { name: 'storybook', path: 'storybook', capacity: 50, grade: 1 },
   { name: 'docker', path: 'docker', capacity: 50, grade: 1 },
 ]
 
