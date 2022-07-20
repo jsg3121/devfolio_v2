@@ -8,7 +8,7 @@ module.exports = {
       instances: '2',
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3333,
+        PORT: 80,
       },
       exec_mode: 'cluster',
     },

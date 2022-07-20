@@ -1,7 +1,7 @@
 import isEqual from 'fast-deep-equal'
 import React from 'react'
 import component from 'styles/components.module.scss'
-import { Image } from './common'
+import Image from './Image'
 
 const Scroll: React.FC = () => {
   return (
