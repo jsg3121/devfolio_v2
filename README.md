@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=45&color=61DAFB&vCenter=true&width=800&lines=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94+FrontEnd+Developer+%EC%9E%A5%EC%84%A0%EA%B7%9C+%EC%9E%85%EB%8B%88%EB%8B%A4)](https://git.io/typing-svg)
 
-## Getting Started
+# Devfolio v2.0
 
-First, run the development server:
+## 프론트엔드 개발자 장선규를 소개하는 포트폴리오 사이트 입니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 이름 : 장선규
+- 생년월일 : 1995. 08. 09
+- 취미 : 프라모델 조립, 게임, 요리
+- E-mail : xodm95@gmail.com
+- Blog : https://velog.io/@jsg3121
+- Portfolio : http://sungyujang.com
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 사용 기술 스택
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js
+&logoColor=white"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript
+&logoColor=white"/>
+<img src="https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=Sass
+&logoColor=white"/>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 사용 라이브러리
 
-## Learn More
+- react-slick (https://react-slick.neostack.com/)
+- tsparticles, react-tsparticles (https://particles.js.org/)
+- gsap (https://greensock.com/gsap/)
+- smooth-scrollbar (https://github.com/idiotWu/smooth-scrollbar)
+- styled-components (https://styled-components.com/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# PageSpeed Score
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Desktop
 
-## Deploy on Vercel
+![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.naver.com/&strategy=desktop)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Mobile
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.naver.com/&strategy=mobile)
