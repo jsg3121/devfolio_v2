@@ -33,7 +33,7 @@ const ContactList: React.FC<ContactListProps> = (props) => {
             )
           })}
       </ul>
-      <ul className={contact['contact__icon-list']}>
+      {/* <ul className={contact['contact__icon-list']}>
         {data &&
           data.iconFile.map((item, index) => {
             return (
@@ -44,7 +44,7 @@ const ContactList: React.FC<ContactListProps> = (props) => {
               </li>
             )
           })}
-      </ul>
+      </ul> */}
     </div>
   )
 }

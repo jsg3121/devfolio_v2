@@ -36,8 +36,8 @@
 
 ## Desktop
 
-![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.naver.com/&strategy=desktop)
+![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.sungyujang.com/&strategy=desktop)
 
 ## Mobile
 
-![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.naver.com/&strategy=mobile)
+![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.sungyujang.com/&strategy=mobile)
