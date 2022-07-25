@@ -36,8 +36,9 @@
 
 ## Desktop
 
-![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.sungyujang.com/&strategy=desktop)
+![image](https://user-images.githubusercontent.com/44659617/180692241-2998a3fc-b2bb-4f97-90a7-bd19b6560be4.png)
+
 
 ## Mobile
 
-![PageSpeed](https://pagespeed-insights.herokuapp.com?url=https://www.sungyujang.com/&strategy=mobile)
+![image](https://user-images.githubusercontent.com/44659617/180692344-6375884c-7ea6-45d3-8ebf-adff713c4e53.png)
