@@ -1,4 +1,5 @@
 import isEqual from 'fast-deep-equal'
+import { gsap } from 'gsap'
 import { articleMotion, projectMotion } from 'motions'
 import React from 'react'
 import styled from 'styled-components'
@@ -30,11 +31,9 @@ const ProjectArticle: React.FC<ProjectArticleProps> = (props) => {
   const { data } = props
 
   React.useEffect(() => {
-    projectMotion()
-    articleMotion()
-
-    return () => (projectMotion(), articleMotion())
-  }, [])
+    projectMotion(data)
+    return () => projectMotion(data)
+  }, [data])
 
   return (
     <article className={data.name.trim().replace(' ', '')}>

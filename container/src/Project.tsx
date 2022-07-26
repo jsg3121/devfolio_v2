@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { ProjectArticle } from 'components'
 import isEqual from 'fast-deep-equal'
+import { articleMotion, projectMotion } from 'motions'
 import React from 'react'
 import project from 'styles/project.module.scss'
 import useSWR from 'swr'
