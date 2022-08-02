@@ -89,7 +89,7 @@ const projectData: Array<ProjectTypes> = [
       git: 'https://github.com/jsg3121/devfolio_v2',
       skills: ['nextjs', 'typescript', 'scss'],
       detailDescription: [
-        'Next.js를 이용한 SSR을 이용한 SEO작업을 진행했습니다.',
+        'Next.js를 이용하여 SEO에 적합한 웹 페이지를 제작했습니다.',
         'gsap라이브러리를 이용하여 최적화된 스크롤에 따라 발생하는 모션 효과를 구현했습니다.',
         '반응형 작업으로 PC뿐만 아니라 태블릿, 모바일에서도 확인 할 수 있도록 하였습니다.',
         '웹 접근성에 맞는 시멘틱 태그의 사용과 브라우저의 작동원리를 고려하여 최적화된 페이지를 제작했습니다.',
