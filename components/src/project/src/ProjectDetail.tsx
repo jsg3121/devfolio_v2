@@ -64,7 +64,6 @@ const ProjectDetail: React.FC<ProjectListProps> = (props) => {
                     alt="detail_image"
                     src={detail}
                     layout="fill"
-                    priority
                     objectFit="contain"
                   />
                 </div>
