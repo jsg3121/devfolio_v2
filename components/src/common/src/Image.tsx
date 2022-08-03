@@ -16,7 +16,7 @@ const ImageStyle = styled((props) => {
 `
 
 const Image: React.FC<CustomImageProps> = (props) => {
-  const { src, alt, layout, objectFit, shadow } = props
+  const { src, alt, layout, objectFit, shadow, loading } = props
 
   return (
     <picture>
@@ -25,7 +25,8 @@ const Image: React.FC<CustomImageProps> = (props) => {
           src={src}
           layout={layout}
           alt={alt}
-          priority
+          priority={loading && false}
+          loading={loading && loading}
           objectFit={objectFit && objectFit}
         />
       </ImageStyle>
