@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     html,body{
         font-size: 18px;
         -webkit-text-size-adjust: none;
-        font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;       
+        font-family: 'Gmarket Sans',-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;       
         font-display: fallback;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -70,9 +70,32 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1,h2,h3,h4,h5,h6,p,span,textarea {
+        font-family: 'Gmarket Sans';
         color: #333333;
     }
-     @media screen and (min-width: 1281px) {
+
+    @font-face {
+        font-family: 'Gmarket Sans';
+        src: url('/public/fonts/GmarketSansLight.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Gmarket Sans';
+        src: url('/public/fonts/GmarketSansMedium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Gmarket Sans';
+        src: url('/public/fonts/GmarketSansBold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @media screen and (min-width: 1281px) {
         html, body {
             font-size : calc(max(18px,1vw));
         }
