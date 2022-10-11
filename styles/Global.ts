@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     html,body{
         font-size: 18px;
         -webkit-text-size-adjust: none;
-        font-family: 'Gmarket Sans',-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;       
+        font-family: sans-serif,-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo;       
         font-display: fallback;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -70,51 +70,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1,h2,h3,h4,h5,h6,p,span,textarea {
-        font-family: 'Gmarket Sans';
+        font-family: sans-serif,-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo;       
         color: #333333;
-    }
-
-    @font-face {
-        font-family: 'Gmarket Sans';
-        src: url('/public/fonts/GmarketSansLight.woff2') format('woff2');
-        font-weight: 300;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Gmarket Sans';
-        src: url('/public/fonts/GmarketSansMedium.woff2') format('woff2');
-        font-weight: 500;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Gmarket Sans';
-        src: url('/public/fonts/GmarketSansBold.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-    }
-
-    @media screen and (min-width: 1281px) {
-        html, body {
-            font-size : calc(max(18px,1vw));
-        }
-    }
-
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
-        html, body {
-            font-size : 16px;
-        }
-    }
-    @media screen and (min-width: 680px) and (max-width: 959px) {
-        html, body {
-            font-size : 14px;
-        }
-    }
-    @media screen and (max-width: 679px) {
-        html, body {
-            font-size : 12px;
-        }
     }
     /* @media screen and (max-width: 479px) {
         html, body {
