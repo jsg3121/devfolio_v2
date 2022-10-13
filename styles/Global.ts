@@ -73,6 +73,31 @@ export const GlobalStyle = createGlobalStyle`
         font-family: sans-serif,-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo;       
         color: #333333;
     }
+
+    @media screen and (min-width: 1281px) {
+        html,
+        body {
+            font-size: calc(max(18px, 1vw));
+        }
+    }
+    @media screen and (min-width: 960px) and (max-width: 1280px) {
+        html,
+        body {
+            font-size: 16px;
+        }
+    }
+    @media screen and (min-width: 680px) and (max-width: 959px) {
+        html,
+        body {
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 679px) {
+        html,
+        body {
+            font-size: 12px;
+        }
+    }
     /* @media screen and (max-width: 479px) {
         html, body {
             font-size : 11px;
