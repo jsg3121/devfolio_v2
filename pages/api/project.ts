@@ -79,10 +79,43 @@ const projectData: Array<ProjectTypes> = [
     thumbnail: '/weather_detail_100.webp',
   },
   {
+    index: 4,
+    name: 'Pokemon Dogam',
+    mainDescription: `새로운 기술이 아닌 현재 사용하고 있는, 사용해 봤던 기술들의 숙련도를 올리고자 제작한 프로젝트 입니다.
+                      기존 axios를 이용한 API 통신이 아닌 Graphql을 사용하여 데이터를 주고받았고 서버와 클라이언트 개발과 더불어 실제 배포를 하게 됐을 때 해당 정보를 사용자 입장에서 볼 수 있도록
+                      docusaurus를 통해 블로그 형식의 문서 페이지를 제작하였습니다.`,
+    detail: {
+      name: 'Pokemon Dogam',
+      date: '2022. 12 ~ 2023. 4',
+      git: 'https://github.com/jsg3121/pokemon',
+      skills: ['typescript', 'node', 'prisma', 'react', 'graphql'],
+      detailDescription: [
+        'prisma와 postgresql를 이용한 데이터베이스를 구축하였습니다.',
+        'graphql을 통하여 클라이언트와 서버 사이 데이터를 요청하고 가공 할 수 있도록 구현하였습니다.',
+        'react virtuoso등을 이용하여 렌더링 시 사용되는 메모리, 페이지 로딩시간, 접근성을 고려한 최적화를 진행하였습니다.',
+        '실제 사용자 입장에서 더 많이 쓰일 것 같은 기능들과 접근성을 고려하여 UI를 구성하였습니다.',
+        '실제 사용자들이 이용할 수 있는 상황으로 가정하여 실제 업데이트 내역, 이용방법등을 알 수 있는 블로그 사이트를 추가로 제작하였습니다.',
+        '사이트 : http://43.201.49.91:3000/',
+        '블로그사이트 : http://43.201.49.91:3001/',
+      ],
+      members: ['개발 : 장선규'],
+      detailThumbnail: [
+        '/dev_v2_000.webp',
+        '/dev_v2_thumb.webp',
+        '/dev_v2_200.webp',
+        '/dev_v2_300.webp',
+        '/dev_v2_400.webp',
+        '/dev_v2_500.webp',
+        '/dev_v2_600.webp',
+      ],
+    },
+    thumbnail: '/dev_v2_thumb.webp',
+  },
+  {
     index: 'This',
     name: 'Devfolio_v2',
     mainDescription: `새롭게 사용하게 된 React 라이브러리를 이용한 typescript를 이용한 Next.js프레임워크로 
-                      이전 사이트보다 개선되고 웹 페이지를 제작했으며 SEO를 도입해 브라우저에서 검색시 검색 결과에 더 잘보이도록 하였습니다.`,
+                      이전 사이트보다 개선된 웹 페이지를 제작했으며 SEO를 도입해 브라우저에서 검색시 검색 결과에 더 잘보이도록 하였습니다.`,
     detail: {
       name: 'Devfolio_v2',
       date: '2022. 06 ~ 2022. 8',
