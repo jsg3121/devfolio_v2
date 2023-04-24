@@ -24,6 +24,16 @@ const careerList: CareerProps['career'] = [
     endDate: '재직중',
     career: [
       {
+        name: '큐버 사내 OTA 시스템 고도화',
+        date: '2022-08 ~ 2023-02',
+        description: [
+          '기존 사내 개발 소스, 앱 버전관리 및 원격을 이용한 개발 장비 업데이트 관리를 위한 관리자 페이지 고도화',
+          '자사 태블릿 pc및 하드웨어 기기 as 관련 및 기기 정보 관리자 페이지 개발',
+          '원격 기능 관련 연동 관리자 페이지 UI 개발',
+          'react를 이용한 웹페이지 구현 및 렌더링 최적화',
+        ],
+      },
+      {
         name: '서경방송 관리자 페이지 고도화 (OTA Server, 업데이트 관리)',
         date: '2021. 11 ~ 2022. 04',
         description: [
