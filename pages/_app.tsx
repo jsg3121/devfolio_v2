@@ -6,6 +6,7 @@ import { GlobalStyle } from '../styles/Global'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../styles/common.scss'
+import Script from 'next/script'
 
 const Root = styled.main`
   width: 100%;
@@ -34,18 +35,38 @@ function MyApp({ Component, pageProps }: AppProps) {
           Thank you for visiting my dev portfolio site!!
           "
         />
-        <meta name="og:site_name" content="장선규's Devfolio" />
-        <meta name="og:title" content="프론트엔드 개발자 장선규" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sungyujang.com" />
+        <meta property="og:site_name" content="장선규's Devfolio" />
         <meta
-          name="og:description"
+          property="og:title"
+          content="프론트엔드 개발자 장선규's Devfolio"
+        />
+        <meta
+          property="og:description"
           content="안녕하세요 프론트엔드 개발자 장선규의 포트폴리오 사이트 입니다."
         />
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content="" />
-        <meta name="og:image" content="/favicon.ico" />
-        <meta name="robots" />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="robots" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://sungyujang.com" />
       </Head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-HBRHEG0GFL"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-HBRHEG0GFL', {
+            page_path: window.location.path
+          });
+          `}
+      </Script>
       <GlobalStyle />
       <Root id="root">
         <Component {...pageProps} />
