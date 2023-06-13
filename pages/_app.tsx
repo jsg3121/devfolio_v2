@@ -67,6 +67,16 @@ function MyApp({ Component, pageProps }: AppProps) {
           });
           `}
       </Script>
+      <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" />
+      <Script id="ntag-init" type="text/javascript" strategy="afterInteractive">
+        {`
+          if(!wcs_add) var wcs_add = {};
+          wcs_add["wa"] = "1bbc74686b266d0";
+          if(window.wcs) {
+            wcs_do();
+          }
+        `}
+      </Script>
       <GlobalStyle />
       <Root id="root">
         <Component {...pageProps} />
