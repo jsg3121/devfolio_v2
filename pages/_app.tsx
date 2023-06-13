@@ -25,12 +25,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           name="keywords"
-          content="Jang Sungyu, Portfolio, Developer, Front-End, 개발자, 프론트엔드"
+          content="Jang Sungyu, Portfolio, Developer, 포트폴리오, FrontEnd, 개발자, 프론트엔드"
         />
         <meta
           name="description"
           content="
-          FrontEnd Developer Jang Sungyu's Devfolio 프론트엔드 개발자 장선규의 개발 포트폴리오 입니다. 
+          FrontEnd Developer Jang Sungyu's Devfolio 프론트엔드 개발자 장선규의 포트폴리오 사이트 입니다. 
           찾아주셔서 감사합니다!
           Thank you for visiting my dev portfolio site!!
           "
@@ -46,7 +46,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:description"
           content="안녕하세요 프론트엔드 개발자 장선규의 포트폴리오 사이트 입니다."
         />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta
+          property="og:image"
+          content="https://sungyujang.com/profile.webp"
+        />
         <meta property="og:locale" content="ko_KR" />
         <meta property="robots" />
         <link rel="icon" href="/favicon.ico" />
